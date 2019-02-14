@@ -861,43 +861,43 @@ Adobe apps will be closed during the update.  Download and install these updates
         
         CloseCCApps
         
-		AEFTUpdate		#After Effects
+	AEFTUpdate		#After Effects
 
-		FLPRUpdate		#Animate
+	FLPRUpdate		#Animate
 
-		AUDTUpdate		#Audition
+	AUDTUpdate		#Audition
 
-		KBRGUpdate		#Bridge
+	KBRGUpdate		#Bridge
 
-		CHARUpdate		#Character Animator
+	CHARUpdate		#Character Animator
 
-		ESHRUpdate		#Dimension
+	ESHRUpdate		#Dimension
 
-		DRWVUpdate		#Dreamweaver
+	DRWVUpdate		#Dreamweaver
 
-		FUSEUpdate		#Fuse
+	FUSEUpdate		#Fuse
 
-		ILSTUpdate		#Illustrator
+	ILSTUpdate		#Illustrator
 
-		AICYUpdate		#InCopy
+	AICYUpdate		#InCopy
 
-		IDSNUpdate		#InDesign
+	IDSNUpdate		#InDesign
 
-		LRCCUpdate		#Lightroom CC
+	LRCCUpdate		#Lightroom CC
 
-		LTRMUpdate		#Lightroom Classic
+	LTRMUpdate		#Lightroom Classic
 
-		AMEUpdate		  #Media Encoder
+	AMEUpdate		  #Media Encoder
 
-		PHSPUpdate		#Photoshop
+	PHSPUpdate		#Photoshop
 
-		PRLDUpdate		#Prelude
+	PRLDUpdate		#Prelude
 
-		PPROUpdate		#Premiere Pro
+	PPROUpdate		#Premiere Pro
 
-		RUSHUpdate		#Premiere Rush
+	RUSHUpdate		#Premiere Rush
 
-		SPRKUpdate		#XD
+	SPRKUpdate		#XD
         
         CleanUp
         
