@@ -9,16 +9,21 @@
 # DESCRIPTION
 #
 #	Type: POLICY - This can be ran against all computers. If there are no updates it will
-#		  not inform the user, the script will just exit.
+#             not inform the user, the script will just exit.
 #
 #	Features:
 #   	- Inform the user which updates are available
 #   	- User will have to click the "Install" button to start the update process
-#		- All Adobe apps will quit
-#		- Download and install Adobe updates based on the updates available
-#		- User will be shown which app is being downloaded/updated during the process
-#		- When finished the prompts will go away
-#		- If there are no updates available it will not prompt the user
+#	- All Adobe apps will quit
+#	- Download and install Adobe updates based on the updates available
+#	- User will be shown which app is being downloaded/updated during the process
+#	- When finished the prompts will go away
+#	- If there are no updates available it will not prompt the user
+#
+#	Notes:
+#	- Package all Adobe app icons (.icns) files into a folder called "AdobeIcons" and install
+#	  into the /var/tmp folder if you want the jamfHelper window to display the icon for each
+#	  app that is getting updated. 
 #
 # VERSION
 #
@@ -26,7 +31,7 @@
 #
 # RESOURCES
 #
-#	- https://helpx.adobe.com/enterprise/package/help/apps-deployed-without-their-base-versions.html
+# 	- https://helpx.adobe.com/enterprise/package/help/apps-deployed-without-their-base-versions.html
 #
 # CHANGE HISTORY
 #
@@ -68,27 +73,27 @@ installSPRK="/usr/local/bin/RemoteUpdateManager --productVersions=SPRK"		# XD
 
 # App icons (package gets deployed before script runs)
 
-ACROicon="/var/tmp/AdobeIcons/Acrobat.icns"				# Acrobat
+ACROicon="/var/tmp/AdobeIcons/Acrobat.icns"			# Acrobat
 ACCDicon="/var/tmp/AdobeIcons/CreativeCloud.icns"		# Adobe Creative Cloud
 AEFTicon="/var/tmp/AdobeIcons/AfterEffects.icns"		# After Effects
-FLPRicon="/var/tmp/AdobeIcons/Animate.icns"				# Animate
+FLPRicon="/var/tmp/AdobeIcons/Animate.icns"			# Animate
 AUDTicon="/var/tmp/AdobeIcons/Audition.icns"			# Audition
-KBRGicon="/var/tmp/AdobeIcons/Bridge.icns"				# Bridge
-CHARicon="/var/tmp/AdobeIcons/CharacterAnimator.icns"	# Character Animator
+KBRGicon="/var/tmp/AdobeIcons/Bridge.icns"			# Bridge
+CHARicon="/var/tmp/AdobeIcons/CharacterAnimator.icns"		# Character Animator
 ESHRicon="/var/tmp/AdobeIcons/Dimension.icns"			# Dimension
 DRWVicon="/var/tmp/AdobeIcons/Dreamweaver.icns"			# Dreamweaver
-FUSEicon="/var/tmp/AdobeIcons/Fuse.icns"				# Fuse
+FUSEicon="/var/tmp/AdobeIcons/Fuse.icns"			# Fuse
 ILSTicon="/var/tmp/AdobeIcons/Illustrator.icns"			# Illustrator
-AICYicon="/var/tmp/AdobeIcons/InCopy.icns"				# InCopy
+AICYicon="/var/tmp/AdobeIcons/InCopy.icns"			# InCopy
 IDSNicon="/var/tmp/AdobeIcons/InDesign.icns"			# InDesign
 LRCCicon="/var/tmp/AdobeIcons/LightroomCC.icns"			# Lightroom CC
-LTRMicon="/var/tmp/AdobeIcons/LightroomClassic.icns"	# Lightroom Classic
+LTRMicon="/var/tmp/AdobeIcons/LightroomClassic.icns"		# Lightroom Classic
 AMEicon="/var/tmp/AdobeIcons/MediaEncoder.icns"			# Media Encoder
 PHSPicon="/var/tmp/AdobeIcons/Photoshop.icns"			# Photoshop
-PRLDicon="/var/tmp/AdobeIcons/Prelude.icns"				# Prelude
+PRLDicon="/var/tmp/AdobeIcons/Prelude.icns"			# Prelude
 PPROicon="/var/tmp/AdobeIcons/PremierePro.icns"			# Premiere Pro
 RUSHicon="/var/tmp/AdobeIcons/PremiereRush.icns"		# Premiere Rush
-SPRKicon="/var/tmp/AdobeIcons/XD.icns"					# XD
+SPRKicon="/var/tmp/AdobeIcons/XD.icns"				# XD
 
 
 ##################################################################
