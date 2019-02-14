@@ -9,7 +9,7 @@
 # DESCRIPTION
 #
 # 	Type: SELF SERVICE - This will run on demand if the user wants to check for Adobe 
-#		updates.  The user WILL be informed if there are no updates available.
+#	      updates.  The user WILL be informed if there are no updates available.
 #
 # 	Features:
 #   	- Inform the user which updates are available
@@ -19,6 +19,12 @@
 #	- User will be shown which app is being downloaded/updated during the process
 #	- When finished the user will be prompted that updates have completed
 #	- If there are no updates available it will prompt the user
+#
+#	Notes:
+#	- Package all Adobe app icons (.icns) files into a folder called "AdobeIcons" and install
+#	  into the /var/tmp folder if you want the jamfHelper window to display the icon for each
+#	  app that is getting updated.  Add the package to the policy and make sure the script runs
+#	  after the package is installed.
 #
 # VERSION
 #
