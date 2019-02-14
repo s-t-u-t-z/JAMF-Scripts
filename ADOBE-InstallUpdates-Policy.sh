@@ -23,7 +23,8 @@
 #	Notes:
 #	- Package all Adobe app icons (.icns) files into a folder called "AdobeIcons" and install
 #	  into the /var/tmp folder if you want the jamfHelper window to display the icon for each
-#	  app that is getting updated. 
+#	  app that is getting updated.  Add the package to the policy and make sure the script runs
+#	  after the package is installed.
 #
 # VERSION
 #
