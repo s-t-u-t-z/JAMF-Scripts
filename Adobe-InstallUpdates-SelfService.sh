@@ -19,6 +19,7 @@
 #	- User will be shown which app is being downloaded/updated during the process
 #	- When finished the user will be prompted that updates have completed
 #	- If there are no updates available it will prompt the user
+#	- The script will fail if no user is signed in (this is on purpose)
 #
 #	Notes:
 #	- Package all Adobe app icon (.icns) files into a folder called "AdobeIcons" and install
