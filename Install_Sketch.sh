@@ -9,18 +9,18 @@
 #
 # DESCRIPTION
 #
-#	This can be used as a Jamf POLICY to provide users weekly updates or it can be used as a 
-#	SELF SERVICE workflow.  It will install the latest version of Sketch.  It has a version checker
+#   This can be used as a Jamf POLICY to provide users weekly updates or it can be used as a 
+#   SELF SERVICE workflow.  It will install the latest version of Sketch.  It has a version checker
 #   to see if the installed version needs to be updated.  The user will only be prompted if the app
 #   is currently running.  Otherwise the update process is a silent install.
 #
 # VERSION
 #
-#	- 1.0
+#   - 1.0
 #
 # CHANGE HISTORY
 #
-# 	- Created script - 2/12/19 (1.0)
+#   - Created script - 2/12/19 (1.0)
 #
 ####################################################################################################
 
