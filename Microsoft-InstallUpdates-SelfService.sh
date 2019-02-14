@@ -9,29 +9,29 @@
 # DESCRIPTION
 #
 #   This script will check and install Microsoft Office Updates.  It will inform the user which 
-#	  updates are available.  The user will have to click the "Install" button to complete the updates.
+#   updates are available.  The user will have to click the "Install" button to complete the updates.
 #   Prompt will not go away until the "Install" button is pressed.  All Microsoft Office apps will
 #   quit before the installation of the updates.
 #
 # SCRIPT TYPE 
 #
-#	  SELF SERVICE - This will run on demand if the user wants to check for Microsoft updates.  The
-#	  user WILL be informed if there are no updates available.
+#   SELF SERVICE - This will run on demand if the user wants to check for Microsoft updates.  The
+#   user WILL be informed if there are no updates available.
 #
 # SCRIPT VERSION
 #
-#	  1.0
+#   1.0
 #
 # NOTES
 #
-# 	The Skype for Business and Remote Desktop installations happen quickly which the tail command
-#	  does not catch for some reason which causes the jamf helper window to get stuck and the policy
-#	  never completes.  Removing the jamf helper window from those two function fixes this.
+#   The Skype for Business and Remote Desktop installations happen quickly which the tail command
+#   does not catch for some reason which causes the jamfHelper window to get stuck and the policy
+#   never completes.  Removing the jamfHelper window from those two function fixes this.
 #
 # RESOURCES
 #
-#	  MSUpdateHelper - pbowden (Microsoft)
-#	  https://github.com/pbowden-msft/msupdatehelper/blob/master/MSUpdateHelper4JamfPro.sh
+#   MSUpdateHelper - pbowden (Microsoft)
+#   https://github.com/pbowden-msft/msupdatehelper/blob/master/MSUpdateHelper4JamfPro.sh
 #
 # CHANGE HISTORY
 #
