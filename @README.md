@@ -1,2 +1,2 @@
 # JAMF-Scripts
-Custom scripts for specifically made for JAMF
+Custom scripts specifically made to use with Jamf Pro.
