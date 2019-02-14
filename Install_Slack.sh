@@ -31,7 +31,6 @@
 AppIcon="/Applications/Slack.app/Contents/Resources/slack.icns"
 jamfHelper="/Library/Application Support/JAMF/bin/jamfHelper.app/Contents/MacOS/jamfHelper"
 ConsoleUser=$(/usr/bin/python -c 'from SystemConfiguration import SCDynamicStoreCopyConsoleUser; import sys; username = (SCDynamicStoreCopyConsoleUser(None, None, None) or [None])[0]; username = [username,""][username in [u"loginwindow", None, u""]]; sys.stdout.write(username + "\n");')
-
 DownloadLink="https://slack.com/ssb/download-osx"
 DownloadURL=$(curl "$DownloadLink" -s -L -I -o /dev/null -w '%{url_effective}')
 FileName=$(printf "%s" "${DownloadURL[@]}" | sed 's@.*/@@')
