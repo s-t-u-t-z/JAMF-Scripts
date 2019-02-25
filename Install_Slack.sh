@@ -169,7 +169,7 @@ Proceed with installation?" \
 		# If the Slack app is not running
 		RemoveSlack
             
-        DownloadSlack
+        	DownloadSlack
 
 	fi  
 
@@ -201,7 +201,7 @@ function RemoveSlack ()
 function CleanUp () 
 {
 
-   	if [[ -e ${FilePath} ]]; then
+    if [[ -e ${FilePath} ]]; then
 
     	rm -rf $FilePath
         
