@@ -58,7 +58,7 @@ function CompareVersions ()
     fi
     
     # New app version and installed app version are the same
-	if [[ "$NewVersion" = "$InstalledVersion" ]]; then
+    if [[ "$NewVersion" = "$InstalledVersion" ]]; then
         
 		echo "Script result: Adobe Flash is current."
             
@@ -82,7 +82,7 @@ function CompareVersions ()
                 
 		InstallAdobeFlash
             
-	fi
+    fi
 
 }
 
