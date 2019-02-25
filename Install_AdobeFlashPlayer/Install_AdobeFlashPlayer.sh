@@ -5,22 +5,22 @@
 #
 # CREATED BY
 #
-#   Brian Stutzman
+#  Brian Stutzman
 #
 # DESCRIPTION
 #
-#	This can be used as a Jamf POLICY to provide users weekly updates or it can be used as a 
-#	SELF SERVICE workflow.  It will install the latest version of Adobe Flash.  It has a version
-#	checker to see if the installed version needs to be updated.  The user will never be prompted
-#   throughout the update process.  The script acts silently.
+#  This can be used as a Jamf POLICY to provide users weekly updates or it can be used as a 
+#  SELF SERVICE workflow.  It will install the latest version of Adobe Flash.  It has a version
+#  checker to see if the installed version needs to be updated.  The user will never be prompted
+#  throughout the update process.  The script acts silently.
 #
 # VERSION
 #
-#	- 1.0
+#  - 1.0
 #
 # CHANGE HISTORY
 #
-# 	- Created script - 2/22/19 (1.0)
+#  - Created script - 2/22/19 (1.0)
 #
 ####################################################################################################
 
