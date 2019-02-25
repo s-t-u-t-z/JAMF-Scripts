@@ -44,50 +44,50 @@ FilePath="/tmp/$FileName"
 function CompareVersions () 
 {
     
-    # Get the latest Slack version
+	# Get the latest Slack version
 	NewVersion=$(/usr/bin/curl -s 'https://downloads.slack-edge.com/mac_releases/releases.json' | grep -o "[0-9]\.[0-9]\.[0-9]" | tail -1)
 
 	# Determine if app is currently installed, if so get version
 	if [[ -d '/Applications/Slack.app' ]]; then
     
-    	InstalledVersion=$(defaults read /Applications/Slack.app/Contents/Info.plist CFBundleShortVersionString)
+		InstalledVersion=$(defaults read /Applications/Slack.app/Contents/Info.plist CFBundleShortVersionString)
         
 		echo "Installed version: $InstalledVersion"
     
-    else
+	else
     
-    	InstalledVersion="Not Installed"
+		InstalledVersion="Not Installed"
     
-        echo "Slack not installed."
+		echo "Slack not installed."
     
-    fi
+	fi
     
-    # New app version and installed app version are the same
+	# New app version and installed app version are the same
 	if [[ "$NewVersion" = "$InstalledVersion" ]]; then
         
 		echo "Script result: Slack is current."
             
 		exit 0
             
-    fi
+	fi
     
-    # New app version is greater than the installed version
-    if [[ "$NewVersion" > "$InstalledVersion" ]]; then
+	# New app version is greater than the installed version
+	if [[ "$NewVersion" > "$InstalledVersion" ]]; then
         
-    	echo "Script result: Installing latest Slack version."
+		echo "Script result: Installing latest Slack version."
         
-        HandleSlack
+		HandleSlack
             
-    fi
+	fi
     
-    # App not currently installed
-    if [[ "$InstalledVersion" = "Not Installed" ]]; then
+	# App not currently installed
+	if [[ "$InstalledVersion" = "Not Installed" ]]; then
     
-        echo "Script result: Installing latest Slack version."
+        	echo "Script result: Installing latest Slack version."
                 
 		HandleSlack
             
-    fi
+	fi
 
 }
 
@@ -138,31 +138,31 @@ There is an update available.  It requires the app be closed during this process
 Proceed with installation?" \
     		-button1 "INSTALL" -button2 "CANCEL" -defaultButton 0 -lockHUD)
         
-       	# User clicked install  
+		# User clicked install  
 		if [ "$UserChoice" == "0" ]; then
         
 			echo "Script result: User clicked install."
         
 			RemoveSlack
             
-            DownloadSlack
+			DownloadSlack
             
-            sleep 5
+			sleep 5
         
-    		"$jamfHelper" -windowType hud -heading "Slack Update Manager" \
-    		-description "Update completed!" \
-    		-icon "$AppIcon" -button1 CLOSE -defaultButton 0 -lockHUD
+			"$jamfHelper" -windowType hud -heading "Slack Update Manager" \
+			-description "Update completed!" \
+			-icon "$AppIcon" -button1 CLOSE -defaultButton 0 -lockHUD
         
-        # User clicked cancel
+		# User clicked cancel
   		elif [ "$UserChoice" == "2" ]; then
         
-        	echo "Script result: User clicked cancel...exiting."
+        		echo "Script result: User clicked cancel...exiting."
         
-        	CleanUp
+        		CleanUp
         
-        	exit 0
+        		exit 0
             
-    	fi
+		fi
 
 	else
     
@@ -182,15 +182,15 @@ Proceed with installation?" \
 function RemoveSlack () 
 {
 
-    if [[ -d '/Applications/Slack.app' ]]; then
+	if [[ -d '/Applications/Slack.app' ]]; then
     
-        # Kill the Slack app process
+        	# Kill the Slack app process
 		pkill -9 "Slack"
     
-        # Delete app
+        	# Delete app
 		rm -rf /Applications/Slack.app
         
-    fi
+	fi
 
 }
 
@@ -201,11 +201,11 @@ function RemoveSlack ()
 function CleanUp () 
 {
 
-    if [[ -e ${FilePath} ]]; then
+	if [[ -e ${FilePath} ]]; then
 
-    	rm -rf $FilePath
+		rm -rf $FilePath
         
-    fi
+	fi
 
 }
 
