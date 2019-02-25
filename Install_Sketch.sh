@@ -39,26 +39,26 @@ jamfHelper="/Library/Application Support/JAMF/bin/jamfHelper.app/Contents/MacOS/
 function DownloadSketch () 
 {
 	
-    # Remove any previous files left from prior updates
-    CleanUp
+	# Remove any previous files left from prior updates
+	CleanUp
         
-    # Download Sketch
-    curl -L -o /tmp/sketch.zip "http://download.sketchapp.com/sketch.zip" >/dev/null 2>&1
+	# Download Sketch
+	curl -L -o /tmp/sketch.zip "http://download.sketchapp.com/sketch.zip" >/dev/null 2>&1
 
 	# Change to /tmp directory
-    cd /tmp/
+	cd /tmp/
         
-    # Unzipping app
-    unzip sketch.zip  >/dev/null 2>&1
+	# Unzipping app
+	unzip sketch.zip  >/dev/null 2>&1
     
-    # Setting app permissions
+	# Setting app permissions
 	chown -R root:wheel /tmp/Sketch.app
 	chmod -R 755 /tmp/Sketch.app
 	cd ~
         
-    NewVersion=$(defaults read /tmp/Sketch.app/Contents/Info.plist CFBundleShortVersionString)
+	NewVersion=$(defaults read /tmp/Sketch.app/Contents/Info.plist CFBundleShortVersionString)
         
-    echo "New Version: $NewVersion"
+	echo "New Version: $NewVersion"
     
 }
 
@@ -69,19 +69,19 @@ function DownloadSketch ()
 function LocalVersion () 
 {
 
-    if [[ -d '/Applications/Sketch.app' ]]; then
+	if [[ -d '/Applications/Sketch.app' ]]; then
         
-        InstalledVersion=$(defaults read /Applications/Sketch.app/Contents/Info.plist CFBundleShortVersionString)
+        	InstalledVersion=$(defaults read /Applications/Sketch.app/Contents/Info.plist CFBundleShortVersionString)
         
-        echo "Script result: Installed Version: $InstalledVersion"
+        	echo "Script result: Installed Version: $InstalledVersion"
 
 	else
     
 		InstalledVersion="Not Installed"
     
-    	echo "Script result: Sketch not installed."
+		echo "Script result: Sketch not installed."
 
-    fi
+	fi
     
 }
 
@@ -92,31 +92,31 @@ function LocalVersion ()
 function CompareVersions () 
 {
 
-    if [[ "$InstalledVersion" = "$NewVersion" ]]; then
+	if [[ "$InstalledVersion" = "$NewVersion" ]]; then
         
-    	echo "Script result: Sketch is current."
+    		echo "Script result: Sketch is current."
         
-        SketchStatus=Current
+        	SketchStatus=Current
         
-    fi
+	fi
     
     
-    if [[ "$NewVersion" > "$InstalledVersion" ]]; then
+	if [[ "$NewVersion" > "$InstalledVersion" ]]; then
         
-    	echo "Script result: Installing latest Sketch version."
+    		echo "Script result: Installing latest Sketch version."
         
-        SketchStatus=Update
+        	SketchStatus=Update
         
-    fi
+	fi
     
     
-    if [[ "$InstalledVersion" = "Not Installed" ]]; then
+	if [[ "$InstalledVersion" = "Not Installed" ]]; then
         
-        echo "Script result: Installing latest Sketch version."
+        	echo "Script result: Installing latest Sketch version."
         
-        SketchStatus=None
+        	SketchStatus=None
         
-    fi
+	fi
     
 }
 
@@ -127,17 +127,17 @@ function CompareVersions ()
 function HandleSketch () 
 {
 
-    if [ "$SketchStatus" = "Current" ]; then
+	if [ "$SketchStatus" = "Current" ]; then
         
-        CleanUp
+        	CleanUp
         
-        exit 0
+        	exit 0
         
-    fi
+	fi
         
-   	if [ "$SketchStatus" = "Update" ]; then
+	if [ "$SketchStatus" = "Update" ]; then
     
-    	# Inform user that Sketch is running and needs closed before update can complete
+    		# Inform user that Sketch is running and needs closed before update can complete
 		if pgrep '[S]ketch'; then
     
     		echo "Script result: Sketch is currently running!"
@@ -152,22 +152,22 @@ Proceed with installation?" \
     		-button1 "INSTALL" -button2 "CANCEL" -defaultButton 0 -lockHUD)
 
 		# User chose to install    
-    	if [ "$userChoice" == "0" ]; then
+		if [ "$userChoice" == "0" ]; then
         		
 			echo "Script result: User clicked install."
         
-        	# Kill the Sketch app process
-        	pkill -9 "Sketch"
+			# Kill the Sketch app process
+			pkill -9 "Sketch"
         
-        	RemoveSketch
+			RemoveSketch
     
 			InstallSketch
         
-        	sleep 5
+			sleep 5
         
-    		"$jamfHelper" -windowType hud -heading "Sketch Update Manager" \
-    		-description "Update completed!" \
-    		-icon "$AppIcon" -button1 CLOSE -defaultButton 0 -lockHUD
+    			"$jamfHelper" -windowType hud -heading "Sketch Update Manager" \
+    			-description "Update completed!" \
+    			-icon "$AppIcon" -button1 CLOSE -defaultButton 0 -lockHUD
     
     	# User chose to cancel
     	elif [ "$userChoice" == "2" ]; then
@@ -184,11 +184,11 @@ fi
       
 	if [ "$SketchStatus" = "None" ]; then
             
-        RemoveSketch
+		RemoveSketch
     
 		InstallSketch
         
-    fi
+	fi
     
 }
 
@@ -210,11 +210,11 @@ function InstallSketch ()
 function RemoveSketch () 
 {
 
-    if [[ -d '/Applications/Sketch.app' ]]; then
+	if [[ -d '/Applications/Sketch.app' ]]; then
         until [[ ! -d '/Applications/Sketch.app' ]]; do
             rm -rf /Applications/Sketch.app
         done
-    fi
+	fi
 
 }
 
@@ -225,18 +225,18 @@ function RemoveSketch ()
 function CleanUp () 
 {
 
-    # Remove /tmp files
-    if [[ -e /tmp/sketch.zip ]]; then
+	# Remove /tmp files
+	if [[ -e /tmp/sketch.zip ]]; then
     
             rm -rf /tmp/sketch.zip   
     
-    fi
+	fi
 
-    if [[ -d /tmp/Sketch.app ]]; then
+	if [[ -d /tmp/Sketch.app ]]; then
     
             rm -rf /tmp/Sketch.app
             
-    fi
+	fi
 
 }
 
