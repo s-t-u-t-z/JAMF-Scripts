@@ -87,7 +87,7 @@ function CompareVersions ()
                 
 		HandleSlack
             
-	fi
+    fi
 
 }
 
