@@ -9,7 +9,7 @@ The script will do three things:<br>
 3) Computers with the latest already version installed it will not reinstall.  The script will exit.<br>
 
 <h3>Package</h3>
-Since there is no way to script the "Never check for updates" option.  You have to edit the "mms.cfg" file in "/Library/Application Support/Macromedia".
+Since there is no way to script settings the "Never check for updates" option.  You have to edit the "mms.cfg" file in "/Library/Application Support/Macromedia".  The package will install the mms.cfg file into its proper location.  Make sure this package installs after the script runs.  If you do not want this option selected don't install the package.
 
 <h3>JAMF Workflow</h3>
 -Create a new policy.  Add the Install_AdobeFlashPlayer.sh script and set to run "BEFORE".<br>
