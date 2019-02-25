@@ -1,6 +1,6 @@
 <h1>Install Adobe Flash Player</h1>
 
-This has two parts, the script and the package.
+This has two parts, the script and the package.  The script can be used in a policy for weekly updates or a Self Service policy.
 
 <h3>Script</h3>
 The script will do three things:<br>
@@ -14,5 +14,5 @@ Since there is no way to script the "Never check for updates" option.  You have 
 <h3>JAMF Workflow</h3>
 -Create a new policy.  Add the Install_AdobeFlashPlayer.sh script and set to run "BEFORE".<br>
 -Add the AdobeFlashPlayer-mmscfg.pkg.<br>
--Make sure to update JAMF afterwards so your inventory is updated for the assets running this policy.
+-Make sure to update JAMF afterwards so your inventory is updated for the assets running this policy.<br>
 <img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Install_AdobeFlashPlayer/JAMF_Workflow_AdobeFlashPlayer.png">
