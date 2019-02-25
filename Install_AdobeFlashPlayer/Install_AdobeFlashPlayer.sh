@@ -47,7 +47,7 @@ function CompareVersions ()
 
 		InstalledVersion=$(defaults read "/Library/Internet Plug-Ins/Flash Player.plugin/Contents/version" CFBundleShortVersionString)
 		
-        echo "Installed version: $InstalledVersion"
+        	echo "Installed version: $InstalledVersion"
 
 	else
     
@@ -55,34 +55,34 @@ function CompareVersions ()
     
 		echo "Adobe Flash not installed."
     
-    fi
+    	fi
     
-    # New app version and installed app version are the same
-    if [[ "$NewVersion" = "$InstalledVersion" ]]; then
+	# New app version and installed app version are the same
+	if [[ "$NewVersion" = "$InstalledVersion" ]]; then
         
 		echo "Script result: Adobe Flash is current."
             
 		exit 0
-            
-    fi
+		
+	fi
     
-    # New app version is greater than the installed version
-    if [[ "$NewVersion" > "$InstalledVersion" ]]; then
+	# New app version is greater than the installed version
+	if [[ "$NewVersion" > "$InstalledVersion" ]]; then
         
-    	echo "Script result: Installing latest Adobe Flash version."
+    		echo "Script result: Installing latest Adobe Flash version."
         
-        InstallAdobeFlash
+        	InstallAdobeFlash
             
-    fi
+	fi
     
-    # App not currently installed
-    if [[ "$InstalledVersion" = "Not Installed" ]]; then
+	# App not currently installed
+	if [[ "$InstalledVersion" = "Not Installed" ]]; then
     
-        echo "Script result: Installing latest Adobe Flash version."
+		echo "Script result: Installing latest Adobe Flash version."
                 
 		InstallAdobeFlash
             
-    fi
+	fi
 
 }
 
