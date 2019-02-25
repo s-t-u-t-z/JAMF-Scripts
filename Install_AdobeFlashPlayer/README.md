@@ -1,6 +1,6 @@
 <h1>Install Adobe Flash Player</h1>
 
-This has two parts, the script and the package.  The script can be used in a policy for weekly updates or a Self Service policy.  The update process is silent, no user interruption.
+This has two parts, the script and the package.  The script can be used in a policy for weekly updates, monthly patching or a Self Service policy.  The update process is silent, no user interruption.
 
 <h3>Script</h3>
 The script will do three things:<br>
