@@ -15,3 +15,4 @@ Since there is no way to script the "Never check for updates" option.  You have 
 -Create a new policy.  Add the Install_AdobeFlashPlayer.sh script and set to run "BEFORE".<br>
 -Add the AdobeFlashPlayer-mmscfg.pkg.<br>
 -Make sure to update JAMF afterwards so your inventory is updated for the assets running this policy.
+<img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Install_AdobeFlashPlayer/JAMF_Workflow_AdobeFlashPlayer.png">
