@@ -9,8 +9,8 @@
 # DESCRIPTION
 #
 #   This script will delete the identity preference item from the System keychain.  Add the script
-#	to your JAMF Pro server and set the script parameter (4) to the name of the identity preference
-#	to delete.
+#	  to your JAMF Pro server and set the script parameter (4) to the name of the identity preference
+#	  to delete.
 #
 # SCRIPT TYPE
 #
@@ -22,7 +22,6 @@
 # - Created script - 3/11/19
 #
 ####################################################################################################
-
 
 
 ##################################################################
