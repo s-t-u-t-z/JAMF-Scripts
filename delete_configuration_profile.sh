@@ -9,7 +9,7 @@
 # DESCRIPTION
 #
 #   This script will delete certificates from the System or Login keychain.  Specify which 
-#	keychain(s) and certificate(s) to delete from the script policy settings in JAMF.
+#   keychain(s) and certificate(s) to delete from the script policy settings in JAMF.
 #
 # SCRIPT TYPE
 #
@@ -21,7 +21,6 @@
 # - Created script - 12/20/18
 #
 ####################################################################################################
-
 
 
 ##################################################################
