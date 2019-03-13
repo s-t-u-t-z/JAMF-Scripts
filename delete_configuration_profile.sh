@@ -54,4 +54,4 @@ fi
 
 sleep 5
 
-exit
+exit 0
