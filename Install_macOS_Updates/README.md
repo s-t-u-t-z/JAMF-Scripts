@@ -11,7 +11,7 @@ This script will do the following:<br>
 
 
 <h3>Setup</h3>
-1) Add script to your JPS server<br>
+1) Add the "PATCHING - macOS Updates.sh" script to your JPS server<br>
 2) Policy settings should be set to "Recurring Check-in" and set to "Once per computer"<br>
 3) Set script to run "After"<br>
 <img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Install_macOS_Updates/PolicyGeneralSettings.png">
@@ -19,7 +19,10 @@ This script will do the following:<br>
 
 <h3>What the user will see</h3>
 Window will appear showing the updates that will install:<br><br>
-<img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Install_macOS_Updates/ShowUpdates.png">
+Reboot Required:<br>
+<img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Install_macOS_Updates/ShowUpdates-reboot.png">
+Reboot NOT Required:<br>
+<img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Install_macOS_Updates/ShowUpdates-noreboot.png">
 
 Window will be present while updates download/install:<br><br>
 <img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Install_macOS_Updates/UpdateStatus.png">
