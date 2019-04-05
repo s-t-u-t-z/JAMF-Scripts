@@ -32,5 +32,5 @@ Window will change to count down if updates require a reboot:<br><br>
 Window will appear if NO reboot is required:<br><br>
 <img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Install_macOS_Updates/UpdatesCompleted-noreboot.png">
 
-<h3>Notes</h3>
+<h3>Note</h3>
 The policy will show as "Pending" after the policy has ran on the machine.  This will only happen if there is an update that requires a reboot.  Meaning the policy will run a second time on the computer.  This is "ok" because if there are additional updates to run it will run through the policy again. If there are no updates, the policy will show as "Completed.  If there are updates that DO NOT require a reboot the policy will show as "Completed".
