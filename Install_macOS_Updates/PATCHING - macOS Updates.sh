@@ -8,23 +8,23 @@
 #
 # DESCRIPTION
 #
-#   This script has the following features:  
-#	* Installs all available software updates.
-#	* If there ARE software updates it will inform the user which updates will be installed.
-#   * If there are NO updates available, the script will just exit without notifying the user.  
-#   * The user will be informed IF there are updates that will require a reboot.
-#   * To initiate the install of updates the user has to click the "Install" button.
-#   * This script is designed to handle reboots for T2 chips machines by way of the shutdown 
+# This script has the following features:  
+#  * Installs all available software updates.
+#  * If there ARE software updates it will inform the user which updates will be installed.
+#  * If there are NO updates available, the script will just exit without notifying the user.  
+#  * The user will be informed IF there are updates that will require a reboot.
+#  * To initiate the install of updates the user has to click the "Install" button.
+#  * This script is designed to handle reboots for T2 chips machines by way of the shutdown 
 #	  command so updates (ex: security updates) install correctly.
 #
 # SCRIPT TYPE 
 #
-#	POLICY - This can be ran against all computers. If there are no updates it will NOT inform the
-#	user, the script will just exit.
+#  POLICY - This can be ran against all computers. If there are no updates it will NOT inform the
+#  user, the script will just exit.
 #
 # SCRIPT VERSION
 #
-#	1.0
+#  1.0
 #
 # CHANGE HISTORY
 #
