@@ -1,7 +1,6 @@
 <h1>Install macOS Updates</h1>
 
-This script will do the following:<br>
-- This script has the following features:  <br>
+This script has the following features:<br>
 - Installs all available software updates.<br>
 - If there ARE software updates it will inform the user which updates will be installed.<br>
 - If there are NO updates available, the script will just exit without notifying the user. <br> 
