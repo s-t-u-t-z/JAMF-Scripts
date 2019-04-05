@@ -14,18 +14,18 @@ This script will do the following:<br>
 1) Add script to your JPS server<br>
 2) Policy settings should be set to "Recurring Check-in" and set to "Once per computer"<br>
 3) Set script to run "After"<br>
-<img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Install_AdobeFlashPlayer/PolicyGeneralSettings.png">
-<img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Install_AdobeFlashPlayer/ScriptPolicy.png">
+<img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Install_macOS_Updates/PolicyGeneralSettings.png">
+<img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Install_macOS_Updates/ScriptPolicy.png">
 
 <h3>What the user will see</h3>
 Window will appear showing the updates that will install:<br><br>
-<img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Install_AdobeFlashPlayer/ShowUpdates.png">
+<img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Install_macOS_Updates/ShowUpdates.png">
 
 Window will be present while updates download/install:<br><br>
-<img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Install_AdobeFlashPlayer/UpdateStatus.png">
+<img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Install_macOS_Updates/UpdateStatus.png">
 
 Window will change to count down if updates require a reboot:<br><br>
-<img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Install_AdobeFlashPlayer/RebootCountDown.png">
+<img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Install_macOS_Updates/RebootCountDown.png">
 
 <h3>Notes</h3>
 - The policy will still show as "Pending" after the policy has ran on the machine.  This is "ok" because if there are more updates available it will run again on that computer.  If there are no more updates, then the policy will show as "Completed".
