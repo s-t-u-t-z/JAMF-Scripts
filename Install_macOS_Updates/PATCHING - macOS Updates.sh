@@ -15,7 +15,7 @@
 #  * The user will be informed IF there are updates that will require a reboot.
 #  * To initiate the install of updates the user has to click the "Install" button.
 #  * This script is designed to handle reboots for T2 chips machines by way of the shutdown 
-#	  command so updates (ex: security updates) install correctly.
+#    command so updates (ex: security updates) install correctly.
 #
 # SCRIPT TYPE 
 #
