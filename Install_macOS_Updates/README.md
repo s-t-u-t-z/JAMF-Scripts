@@ -30,7 +30,7 @@ Window will be present while updates download/install:<br><br>
 Window will change to count down if updates require a reboot:<br><br>
 <img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Install_macOS_Updates/RebootCountDown.png">
 
-Window will appear if NO require is required:<br><br>
+Window will appear if NO reboot is required:<br><br>
 <img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Install_macOS_Updates/UpdatesCompleted-noreboot.png">
 
 <h3>Notes</h3>
