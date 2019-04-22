@@ -8,7 +8,7 @@
 #
 # DESCRIPTION
 #
-#	Type: SELF SERVICE or POLICY
+# Type: SELF SERVICE or POLICY
 #
 # This script can be used in Self Service or applied as a standard Policy.  Script will prompt the
 # user to type in the machine asset tag.  Before submitting information to JAMF Pro Server it will
