@@ -29,7 +29,7 @@
 compNAME=`hostname`
 
 # Dialog box to ask for asset tag
-assetTAG="$(osascript -e 'Tell application "System Events" to display dialog "Enter the Asset Tag Number:" default answer "" with text buttons {"OK"} default button 1' -e 'text returned of result')"
+assetTAG="$(osascript -e 'Tell application "System Events" to display dialog "Enter the Asset Tag:" default answer "" with text buttons {"OK"} default button 1' -e 'text returned of result')"
 
 # Dialog box to confirm asset tag
 osascript >/dev/null 2>&1 <<-EOF
