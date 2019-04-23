@@ -17,7 +17,7 @@
 #
 # VERSION
 #
-#	- 1.1
+# - 1.1
 #
 # CHANGE HISTORY
 #
