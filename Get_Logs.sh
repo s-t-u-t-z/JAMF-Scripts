@@ -8,7 +8,7 @@
 #
 # DESCRIPTION
 #
-#	Type: SELF SERVICE POLICY
+# Type: SELF SERVICE POLICY
 #
 # This script is meant to be ran from Self Service to gather important system and user logs to
 # help in diagnosing computer issues.  The script will copy all the logs into a folder, the folder
