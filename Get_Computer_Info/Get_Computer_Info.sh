@@ -19,7 +19,7 @@
 #	- macOS Version (Build #)
 #	- IP Address for en0, en1, en3, en5, en8 interfaces
 #	- MAC Addresses for en0, en1, en3, en5, en8 interfaces
-#	- VPN IP (adjust "vpnIPSubnet" variable for VPN subnet IP)
+#	- VPN IP (edit "vpnIPSubnet" variable)
 #	- Installed Memory
 #	- Free Disk Space
 #	- Computer Up Time
@@ -47,7 +47,7 @@
 #	- Sleep Status
 #	- Time Zone
 #	- Remote Login Status
-#	- File System Type
+#	- File System Type (edit "fileSystemName" varaible)
 #	- Startup Disk
 #
 #	NOTE: The returned value of the varaibles will vary from machine to machine.  This will cause
