@@ -4,7 +4,7 @@
 #
 # CREATED BY
 #
-#   Brian Stutzman
+#   	Brian Stutzman
 #
 # DESCRIPTION
 #
@@ -60,7 +60,7 @@
 #
 # CHANGE HISTORY
 #
-# - Created script - 4/29/19 (1.0)
+# 	- Created script - 4/29/19 (1.0)
 #
 ####################################################################################################
 
