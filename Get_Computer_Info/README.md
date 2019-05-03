@@ -2,10 +2,10 @@
 
 <img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Get_Computer_Info/Get_Computer_Info_ex1.png">
 
-Script Type: Self Service Policy<br><br>
+Script Type: Self Service Policy<br>
 
 Purpose of this script is to provide machine information to either the user or administrator.
-The following information will be displayed in a JAMF Message window:<br><br>
+The following information will be displayed in a JAMF Message window:<br>
 
 - Logged in Username
 - Computer Hostname
