@@ -13,7 +13,7 @@ The following information will be displayed in a JAMF Message window:<br>
 - macOS Version (Build #)
 - IP Address for en0, en1, en3, en5, en8 interfaces
 - MAC Addresses for en0, en1, en3, en5, en8 interfaces
-- VPN IP (adjust "vpnIP" variable for VPN subnet IP)
+- VPN IP (edit "vpnIPSubnet" variable)
 - Installed Memory
 - Free Disk Space
 - Computer Up Time
@@ -41,7 +41,7 @@ The following information will be displayed in a JAMF Message window:<br>
 - Sleep Status
 - Time Zone
 - Remote Login Status
-- File System Type
+- File System Type (edit "fileSystemName" varaible)
 - Startup Disk
 
 <h3>NOTE:</h3>
