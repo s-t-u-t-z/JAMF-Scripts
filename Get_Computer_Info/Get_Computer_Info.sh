@@ -11,7 +11,7 @@
 #	Type: SELF SERVICE POLICY
 #
 #	Purpose of this script is to provide machine information to either the user or administrator.
-#	The following information will be displayed in a JAMF Message window:
+#	The following information will be displayed in a JAMF Message (jamfHelper) window:
 #
 #	- Logged in Username
 #	- Computer Hostname
