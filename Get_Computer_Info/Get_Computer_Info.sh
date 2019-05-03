@@ -19,7 +19,7 @@
 #	- macOS Version (Build #)
 #	- IP Address for en0, en1, en3, en5, en8 interfaces
 #	- MAC Addresses for en0, en1, en3, en5, en8 interfaces
-#	- VPN IP (adjust "vpnIP" variable for VPN subnet IP)
+#	- VPN IP (adjust "vpnIPSubnet" variable for VPN subnet IP)
 #	- Installed Memory
 #	- Free Disk Space
 #	- Computer Up Time
