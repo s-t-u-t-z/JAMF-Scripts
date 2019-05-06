@@ -5,32 +5,32 @@
 #
 # CREATED BY
 #
-#   Brian Stutzman
+# Brian Stutzman
 #
 # DESCRIPTION
 #
-# 	Type: SELF SERVICE POLICY
+# Type: SELF SERVICE POLICY
 #
-#	Environments that require users to authenicate to the Ethernet network will create an entry
-#	in the login keychain.  If the user changes their password, the keychain will not update. Running
-#   this script will remove the keychain entry with the old stored password.  The user will be
-#   instructed to toggle the disconnect/connect button for the Etherent connection so it allows the
-#   user to re-authenicate with their new password.
+# Environments that require users to authenicate to the Ethernet network will create an entry
+# in the login keychain.  If the user changes their password, the keychain will not update. Running
+# this script will remove the keychain entry with the old stored password.  The user will be
+# instructed to toggle the disconnect/connect button for the Etherent connection so it allows the
+# user to re-authenicate with their new password.
 #
 # VERSION
 #
-#	- 1.1
+# - 1.1
 #
 # CHANGE HISTORY
 #
-# 	- Created script - 10/15/18 (1.0)
-# 	- Cleaned up script removed un-needed parts and added better variables - 5/6/19 (1.1)
+# - Created script - 10/15/18 (1.0)
+# - Cleaned up script removed un-needed parts and added better variables - 5/6/19 (1.1)
 #
 ####################################################################################################
 
 
 #########################################################################
-## jamfHelper window variables (EDIT THIS SECTION IF NEEDED)
+# jamfHelper window variables (EDIT THIS SECTION IF NEEDED)
 #########################################################################
 
 # Window Typ = (hud, utility, fs)
@@ -44,7 +44,7 @@ icon="/System/Library/CoreServices/CoreTypes.bundle/Contents/Resources/GenericNe
 
 
 #########################################################################
-## Script Variables
+# Script Variables
 #########################################################################
 
 # Get logged in users name
@@ -62,7 +62,7 @@ serviceFullPro=`security find-generic-password -a "$user" | grep -p svce | cut -
 
 
 #########################################################################
-## Remove Keychain entry (EDIT jamfHelper window info if needed)
+# Remove Keychain entry (EDIT jamfHelper window info if needed)
 #########################################################################
 
 if [ "$itemDefault" = "1" ]; then
@@ -70,10 +70,10 @@ if [ "$itemDefault" = "1" ]; then
 	echo "Removed Keychain entry $serviceFullDef"
 
 	# Removes the 802.1X Password entry from keychain
-    security delete-generic-password -s "$serviceFullDef"
+	security delete-generic-password -s "$serviceFullDef"
 
-    # Open Network System Preferences pane
-    open /System/Library/PreferencePanes/Network.prefPane
+	# Open Network System Preferences pane
+	open /System/Library/PreferencePanes/Network.prefPane
 
     "/Library/Application Support/JAMF/bin/jamfHelper.app/Contents/MacOS/jamfHelper" -windowType "$type" -heading "Found Keychain Entry" -alignHeading left -description "Within System Preferences > Networking:
     
@@ -88,10 +88,10 @@ elif [ "$itemprofileID" = "1" ]; then
 	echo "Removed Keychain entry $serviceFullPro"
 
 	# Removes the 802.1X Password entry from keychain
-    security delete-generic-password -s "$serviceFullPro"
+	security delete-generic-password -s "$serviceFullPro"
 
-    # Open Network System Preferences pane
-    open /System/Library/PreferencePanes/Network.prefPane
+	# Open Network System Preferences pane
+	open /System/Library/PreferencePanes/Network.prefPane
 
     "/Library/Application Support/JAMF/bin/jamfHelper.app/Contents/MacOS/jamfHelper" -windowType "$type" -heading "Found Keychain Entry" -alignHeading left -description "Within System Preferences > Networking:
     
@@ -106,7 +106,7 @@ else
 	echo "No 802.1X Ethernet entry found in keychain."
 
 	# Open Network System Preferences pane
-    open /System/Library/PreferencePanes/Network.prefPane
+	open /System/Library/PreferencePanes/Network.prefPane
 
     "/Library/Application Support/JAMF/bin/jamfHelper.app/Contents/MacOS/jamfHelper" -windowType "$type" -heading "No Keychain Entry Found" -alignHeading left -description "Within System Preferences > Networking:
     
