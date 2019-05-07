@@ -36,7 +36,7 @@ modelMacPro=`sysctl hw.model | cut -c 11-16`
 ##################################################################
 if [[ "$modelMB" = "MacBook" || "$modelMBP" = "MacBookPro" || "$modelMBA" = "MacBookAir" ]]; then
 	# Run JAMF policy on laptops
-  #jamf policy -id 12
+	#jamf policy -id 12
 fi
 
 
@@ -45,7 +45,7 @@ fi
 ##################################################################
 if [[ "$modelMacMini" = "Macmini" || "$modeliMac" = "iMac" || "$modeliMacPro" = "iMacPro" || "$modelMacPro" = "MacPro" ]]; then
 	# Run JAMF policy on desktops
-  #jamf policy -id 13
+	#jamf policy -id 13
 fi
 
 
