@@ -4,7 +4,7 @@
 #
 # CREATED BY
 #
-#   Brian Stutzman
+#	Brian Stutzman
 #
 # DESCRIPTION
 #
@@ -26,8 +26,8 @@
 #
 # CHANGE HISTORY
 #
-# 	- Created script - 12/1/17 (1.0)
-# 	- Cleaned up script, added better variables and refined commands - 5/9/19 (1.1)
+#	- Created script - 12/1/17 (1.0)
+#	- Cleaned up script, added better variables and refined commands - 5/9/19 (1.1)
 #
 ####################################################################################################
 
