@@ -33,7 +33,7 @@
 
 
 ##################################################################
-## JAMF message window variables (EDIT THIS SECTION)
+## JAMF message window variables (EDIT THIS SECTION - OPTIONAL)
 ##################################################################
 
 # Location of jamfHelper binary
