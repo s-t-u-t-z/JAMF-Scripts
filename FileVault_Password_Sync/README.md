@@ -34,13 +34,14 @@ back.  This script will do all the heavy lifting for you.<br>
 <h3>Script Breakdown:</h3>
 This is a brief explaination of the script process:<br><br>
 
-<b>1 (function checkFVStatus)</b> - The script will check the status of FileVault (if its enabled or disabled).<br><br>
-<b>2 (function removeLoggedInUserFromFV)</b> - It will determine if the logged in user is already a FileVault enabled user or not.  If so, it will remove the account.<br><br>
-<b>3 (function addLoggedInUserToFV)</b> - The administrator will need to type in the password for the "MANAGEMENT_ACCOUNT".  Afterwards the user will be prompted to type in their password.  A Secure Token will be created for both the "TEMP_ADMIN_ACCOUNT" and "Logged in User's Account".  The "TEMP_ADMIN_ACCOUNT" will be used to add the "Logged in user's account" to FileVault.<br><br>
-<b>4 (function cleanUpFiles)</b> - Cleanup the xml file used to add the user to FileVault.  Deletion of the "TEMP_ADMIN_ACCOUNT" and its Home folder.<br><br>
-<b>5 (function updateFVPrebootScreen)</b> - Update the FileVault Preboot screen.<br><br>
-<b>6 (function confirmUserFVEnabled)</b> - Verify the "Logged in user's account" has been added to FileVault.<br>
+<b>(function checkFVStatus)</b> - The script will check the status of FileVault (if its enabled or disabled).<br><br>
+<b>(function removeLoggedInUserFromFV)</b> - It will determine if the logged in user is already a FileVault enabled user or not.  If so, it will remove the account.<br><br>
+<b>(function addLoggedInUserToFV)</b> - The administrator will need to type in the password for the "MANAGEMENT_ACCOUNT".  Afterwards the user will be prompted to type in their password.  A Secure Token will be created for both the "TEMP_ADMIN_ACCOUNT" and "Logged in User's Account".  The "TEMP_ADMIN_ACCOUNT" will be used to add the "Logged in user's account" to FileVault.<br><br>
+<b>(function cleanUpFiles)</b> - Cleanup the xml file used to add the user to FileVault.  Deletion of the "TEMP_ADMIN_ACCOUNT" and its Home folder.<br><br>
+<b>(function updateFVPrebootScreen)</b> - Update the FileVault Preboot screen.<br><br>
+<b>(function confirmUserFVEnabled)</b> - Verify the "Logged in user's account" has been added to FileVault.<br>
 
 <h3>Notes:</h3>
-The "TEMP_ADMIN_ACCOUNT", "TEMP_ADMIN_PASSWORD" and the logged in user's username and password will be exported in PLAIN TEXT to the plist (XML) file.  Once the plist file has been used to add the user to FileVault its file contents are overwritten, renamed, permissions changed, and then deleted.   This process happens pretty quick but there is a slight chance it can be copied if the user knows where its saved.  By default its saved to the "/tmp" folder.  Change the location if you want to bury it deeper.  If you want to add more security to the script look at: https://github.com/jamf/Encrypted-Script-Parameters
+The "TEMP_ADMIN_ACCOUNT", "TEMP_ADMIN_PASSWORD" and the logged in user's username and password will be exported in PLAIN TEXT to the plist (XML) file.  Once the plist file has been used to add the user to FileVault its file contents are overwritten, renamed, permissions changed, and then deleted.   This process happens pretty quick but there is a slight chance it can be copied if the user knows where its saved.  By default its saved to the "/tmp" folder.  Change the location if you want to bury it deeper.<br>
+If you want to add more security to the script look at: https://github.com/jamf/Encrypted-Script-Parameters
 
