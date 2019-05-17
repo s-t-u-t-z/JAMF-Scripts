@@ -10,12 +10,13 @@ back.  This script will do all the heavy lifting for you.<br>
 
 <h3>Do The Following:</h3>
 (1) Add the "FileVault_Password_Sync.sh" script to your JPS (JAMF Pro Server)<br><br>
-(2) There are only three variables that need to be edited in the script.  Find the "Script variables (EDIT)" section:<br>
+(2) There are four variables that need to be edited in the script.  Find the "Script variables (EDIT)" section:<br>
 <img src="https://github.com/stuutz/JAMF-Scripts/blob/master/FileVault_Password_Sync/edit_script_variables1.png">
 <br>
 ------> <b>adminUser="MANAGEMENT_ACCOUNT"</b>     -- Replace "MANAGEMENT_ACCOUNT" with the management account on your Macs in your environment<br><br>
 ------> <b>tempADMuser="TEMP_ADMIN_ACCOUNT"</b>   -- Replace "TEMP_ADMIN_ACCOUNT" with the name of a temp admin account (note: this account will be deleted at the end of the script)<br><br>
 ------> <b>tempADMpass="TEMP_ADMIN_PASSWORD"</b>  -- Replace "TEMP_ADMIN_PASSWORD" with a password you want to use for the temp account<br><br>
+------> <b>plistFolder=".HiddenTempFolder"</b>  -- Replace ".HiddenTempFolder" with a folder name not too recongizeable (ex: Fs0v3sSL002)<br><br>
 (3) Create a policy.  Add the following payloads to the policy:<br>
 <img src="https://github.com/stuutz/JAMF-Scripts/blob/master/FileVault_Password_Sync/policy_payloads.png"><br>
 ------> <b>Scripts</b> <br><br>
