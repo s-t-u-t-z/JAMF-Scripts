@@ -17,7 +17,7 @@ back.  This script will do all the heavy lifting for you.<br>
 ------> <b>tempADMpass="TEMP_ADMIN_PASSWORD"</b>  -- Replace "TEMP_ADMIN_PASSWORD" with a password you want to use for the temp account<br><br>
 ------> <b>plistFolder=".HiddenTempFolder"</b>  -- Replace ".HiddenTempFolder" with a folder name not too recongizeable (ex: Fs0v3sSL002)<br><br>
 (3) Create a policy.  Add the following payloads to the policy:<br>
-<img src="https://github.com/stuutz/JAMF-Scripts/blob/master/FileVault_Password_Sync/policy_payloads.png"><br>
+<img src="https://github.com/stuutz/JAMF-Scripts/blob/master/FileVault_Password_Sync/policy_payloads.png">
 ------> <b>Scripts</b> <br><br>
 ------------> Add the "FileVault_Password_Sync.sh" <br><br>
 ------------> Set priority to run "After"<br><br>
