@@ -29,8 +29,6 @@ back.  This script will do all the heavy lifting for you.<br>
 ------------> <b>Home Directory Location</b> = <b>/Users/TEMP_ADMIN_ACCOUNT</b> (use the same name as the TEMP_ADMIN_ACCOUNT variable in the script)<br><br>
 ------------> <b>Check box to "Allow user to administer computer"</b><br><br>
 
-<b>Thats all!</b><br><br>
-
 <h3>Script Breakdown:</h3>
 This is a brief explaination of the script process:<br><br>
 
