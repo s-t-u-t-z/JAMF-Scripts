@@ -14,17 +14,17 @@ back.  This script will do all the heavy lifting for you.<br>
 ------> <b>adminUser="MANAGEMENT_ACCOUNT"</b>     -- Replace "MANAGEMENT_ACCOUNT" with the management account on your Macs in your environment<br><br>
 ------> <b>tempADMuser="TEMP_ADMIN_ACCOUNT"</b>   -- Replace "TEMP_ADMIN_ACCOUNT" with the name of a temp admin account (note: this account will be deleted at the end of the script)<br><br>
 ------> <b>tempADMpass="TEMP_ADMIN_PASSWORD"</b>  -- Replace "TEMP_ADMIN_PASSWORD" with a password you want to use for the temp account<br><br>
-(3.0) Create a policy.  Add the following payloads to the policy:<br><br>
-- (3.1) Scripts <br><br>
-      - (3.2) Add the "FileVault_Password_Sync.sh" <br><br>
-      - (3.3) Set priority to run "After"<br><br>
-- (3.2) Local Accounts  <br><br>
-      - Create New Account<br><br>
-      - <b>Username</b> = Same name that was entered into the script for the TEMP_ADMIN_ACCOUNT variable<br><br>
-      - <b>Fullname</b> = Same name that was entered into the script for the TEMP_ADMIN_ACCOUNT variable<br><br>
-      - <b>Password</b> = Same password that was entered into the script for the TEMP_ADMIN_PASSWORD variable<br><br>
-      - <b>Home Directory Location</b> = <b>/Users/TEMP_ADMIN_ACCOUNT</b> (use the same name as the TEMP_ADMIN_ACCOUNT variable in the script)<br><br>
-      - <b>Check box to "Allow user to administer computer"</b><br><br>
+(3) Create a policy.  Add the following payloads to the policy:<br><br>
+------> <b>Scripts</b> <br><br>
+------------> Add the "FileVault_Password_Sync.sh" <br><br>
+------------> Set priority to run "After"<br><br>
+------------> <b>Local Accounts</b>  <br><br>
+------> Create New Account<br><br>
+------------> <b>Username</b> = Same name that was entered into the script for the TEMP_ADMIN_ACCOUNT variable<br><br>
+------------> <b>Fullname</b> = Same name that was entered into the script for the TEMP_ADMIN_ACCOUNT variable<br><br>
+------------> <b>Password</b> = Same password that was entered into the script for the TEMP_ADMIN_PASSWORD variable<br><br>
+------------> <b>Home Directory Location</b> = <b>/Users/TEMP_ADMIN_ACCOUNT</b> (use the same name as the TEMP_ADMIN_ACCOUNT variable in the script)<br><br>
+------------> <b>Check box to "Allow user to administer computer"</b><br><br>
 
 <b>Thats all!</b><br><br>
 
