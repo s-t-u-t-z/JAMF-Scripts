@@ -9,16 +9,16 @@ password reset system).  To fix the issue the user needs to be removed from File
 back.  This script will do all the heavy lifting for you.<br>
 
 <h3>Do The Following:</h3>
-(1) Add the "FileVault_Password_Sync.sh" script to your JPS (JAMF Pro Server)<br><br>
+(1.0) Add the "FileVault_Password_Sync.sh" script to your JPS (JAMF Pro Server)<br><br>
 (2.0) There are only three variables that need to be edited in the script.  Find the "Script variables (EDIT)" section:<br><br>
-  (2.1) <b>adminUser="MANAGEMENT_ACCOUNT"</b>     -- Replace "MANAGEMENT_ACCOUNT" with the management account on your Macs in your environment<br><br>
-  (2.2) <b>tempADMuser="TEMP_ADMIN_ACCOUNT"</b>   -- Replace "TEMP_ADMIN_ACCOUNT" with the name of a temp admin account (note: this account will be deleted at the end of the script)<br><br>
-  (2.3) <b>tempADMpass="TEMP_ADMIN_PASSWORD"</b>  -- Replace "TEMP_ADMIN_PASSWORD" with a password you want to use for the temp account<br><br>
+- (2.1) <b>adminUser="MANAGEMENT_ACCOUNT"</b>     -- Replace "MANAGEMENT_ACCOUNT" with the management account on your Macs in your environment<br><br>
+- (2.2) <b>tempADMuser="TEMP_ADMIN_ACCOUNT"</b>   -- Replace "TEMP_ADMIN_ACCOUNT" with the name of a temp admin account (note: this account will be deleted at the end of the script)<br><br>
+- (2.3) <b>tempADMpass="TEMP_ADMIN_PASSWORD"</b>  -- Replace "TEMP_ADMIN_PASSWORD" with a password you want to use for the temp account<br><br>
 (3.0) Create a policy.  Add the following payloads to the policy:<br><br>
-  (3.1) Scripts <br><br>
+- (3.1) Scripts <br><br>
       - Add the "FileVault_Password_Sync.sh" <br><br>
       - Set priority to run "After"<br><br>
-  (3.2) Local Accounts  <br><br>
+- (3.2) Local Accounts  <br><br>
       - Create New Account<br><br>
       - <b>Username</b> = Same name that was entered into the script for the TEMP_ADMIN_ACCOUNT variable<br><br>
       - <b>Fullname</b> = Same name that was entered into the script for the TEMP_ADMIN_ACCOUNT variable<br><br>
