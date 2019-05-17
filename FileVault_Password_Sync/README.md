@@ -40,7 +40,7 @@ This is a brief explaination of the script process:<br><br>
 <b>(function confirmUserFVEnabled)</b> - Verify the "Logged in user's account" has been added to FileVault.<br>
 
 <h1>Notes:</h1>
-The "TEMP_ADMIN_ACCOUNT", "TEMP_ADMIN_PASSWORD" and the logged in user's username and password will be exported in PLAIN TEXT to the plist (XML) file.  Once the plist file has been used to add the user to FileVault its file contents are overwritten, renamed, permissions changed, and then deleted (the folder which contains the plist is also hidden).   All this happens very quick which makes it difficult to read/view/copy the contents of the plist file but just know there is a possiblity.  By default the hidden folder is stored in the "/tmp" folder.  Change the location if you want to bury it somewhere else.<br><br>
+The "TEMP_ADMIN_ACCOUNT", "TEMP_ADMIN_PASSWORD" and the logged in user's username and password will be exported in PLAIN TEXT to the plist (XML) file.  Once the plist file has been used to add the user to FileVault its file contents are overwritten, renamed, permissions changed, and then deleted (the folder which contains the plist is also hidden).   All this happens very quick which makes it difficult to read/copy the contents of the plist file but just know there is a possiblity.  By default the hidden folder is stored in the "/tmp" folder.  Change the location if you want to bury it somewhere else.<br><br>
 If you want to add more security to the script look at: https://github.com/jamf/Encrypted-Script-Parameters
 
 <h1>TEST YOUR STUFF!</h1>
