@@ -34,7 +34,7 @@ back.  This script will do all the heavy lifting for you.<br>
 <h3>Script Breakdown:</h3>
 This is a brief explaination of the script process:<br><br>
 
-<font color="#808080">1</font> (<font color="#ff5050">function</font> <font color="#99cc00">checkFVStatus</font>) - The script will check the status of FileVault (if its enabled or disabled).<br>
+<font color="red">1</font> (<font color="#ff5050">function</font> <font color="#99cc00">checkFVStatus</font>) - The script will check the status of FileVault (if its enabled or disabled).<br>
 2 (function removeLoggedInUserFromFV) - It will determine if the logged in user is already a FileVault enabled user or not.  If so, it will remove the account.<br>
 3 (function addLoggedInUserToFV) - The administrator will need to type in the password for the "MANAGEMENT_ACCOUNT".  Afterwards the user will be prompted to type in their password.  A Secure Token will be created for both the "TEMP_ADMIN_ACCOUNT" and "Logged in User's Account".  The "TEMP_ADMIN_ACCOUNT" will be used to add the "Logged in user's account" to FileVault.<br>
 4 (function cleanUpFiles) - Cleanup the xml file used to add the user to FileVault.  Deletion of the "TEMP_ADMIN_ACCOUNT" and its Home folder.<br>
