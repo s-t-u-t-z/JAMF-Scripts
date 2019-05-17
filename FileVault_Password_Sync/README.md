@@ -16,8 +16,8 @@ back.  This script will do all the heavy lifting for you.<br>
 - (2.3) <b>tempADMpass="TEMP_ADMIN_PASSWORD"</b>  -- Replace "TEMP_ADMIN_PASSWORD" with a password you want to use for the temp account<br><br>
 (3.0) Create a policy.  Add the following payloads to the policy:<br><br>
 - (3.1) Scripts <br><br>
-      - Add the "FileVault_Password_Sync.sh" <br><br>
-      - Set priority to run "After"<br><br>
+      - (3.2) Add the "FileVault_Password_Sync.sh" <br><br>
+      - (3.3) Set priority to run "After"<br><br>
 - (3.2) Local Accounts  <br><br>
       - Create New Account<br><br>
       - <b>Username</b> = Same name that was entered into the script for the TEMP_ADMIN_ACCOUNT variable<br><br>
