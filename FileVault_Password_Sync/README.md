@@ -2,28 +2,28 @@
 
 Script Type: <b>Self Service Policy</b><br>
 
-<h3>Script Description</h3>
+<h3>Description:</h3>
 This script will fix the issue where the user's Active Directory password is out of sync with the FileVault login screen.
 Usually this happens when the user changes their password outside System Preferences (ex: Active Directory, a PC, or some other
 password reset system).  To fix the issue the user needs to be removed from FileVault enabled users list and add their account
 back.  This script will do all the heavy lifting for you.<br>
 
 <h3>Do The Following:</h3>
-- Add the "FileVault_Password_Sync.sh" script to your JPS (JAMF Pro Server)<br>
-- There are only three variables that need to be edited in the script.  Find the "Script variables (EDIT)" section:<br>
-  - adminUser="MANAGEMENT_ACCOUNT"     -- Replace "MANAGEMENT_ACCOUNT" with the management account on your Macs in your environment<br>
-  - tempADMuser="TEMP_ADMIN_ACCOUNT"   -- Replace "TEMP_ADMIN_ACCOUNT" with the name of a temp admin account (note: this account will be deleted at the end of the script)<br>
-  - tempADMpass="TEMP_ADMIN_PASSWORD"  -- Replace "TEMP_ADMIN_PASSWORD" with a password you want to use for the temp account<br>
-- Create a policy.  Add the following payloads to the policy:<br>
-  - (1) Scripts <br>
-      - Add the "FileVault_Password_Sync.sh" <br>
-      - Set priority to run "After"<br>
-  - (2) Local Accounts  <br>
-      - Create New Account<br>
-      - <b>Username</b> = Same name that was entered into the script for the TEMP_ADMIN_ACCOUNT variable<br>
-      - <b>Fullname</b> = Same name that was entered into the script for the TEMP_ADMIN_ACCOUNT variable<br>
-      - <b>Password</b> = Same password that was entered into the script for the TEMP_ADMIN_PASSWORD variable<br>
-      - <b>Home Directory Location</b> = <b>/Users/TEMP_ADMIN_ACCOUNT</b> (use the same name as the TEMP_ADMIN_ACCOUNT variable in the script)<br>
+- Add the "FileVault_Password_Sync.sh" script to your JPS (JAMF Pro Server)<br><br>
+- There are only three variables that need to be edited in the script.  Find the "Script variables (EDIT)" section:<br><br>
+  - <b>adminUser="MANAGEMENT_ACCOUNT"</b>     -- Replace "MANAGEMENT_ACCOUNT" with the management account on your Macs in your environment<br><br>
+  - <b>tempADMuser="TEMP_ADMIN_ACCOUNT"</b>   -- Replace "TEMP_ADMIN_ACCOUNT" with the name of a temp admin account (note: this account will be deleted at the end of the script)<br><br>
+  - <b>tempADMpass="TEMP_ADMIN_PASSWORD"</b>  -- Replace "TEMP_ADMIN_PASSWORD" with a password you want to use for the temp account<br><br>
+- Create a policy.  Add the following payloads to the policy:<br><br>
+  - (1) Scripts <br><br>
+      - Add the "FileVault_Password_Sync.sh" <br><br>
+      - Set priority to run "After"<br><br>
+  - (2) Local Accounts  <br><br>
+      - Create New Account<br><br>
+      - <b>Username</b> = Same name that was entered into the script for the TEMP_ADMIN_ACCOUNT variable<br><br>
+      - <b>Fullname</b> = Same name that was entered into the script for the TEMP_ADMIN_ACCOUNT variable<br><br>
+      - <b>Password</b> = Same password that was entered into the script for the TEMP_ADMIN_PASSWORD variable<br><br>
+      - <b>Home Directory Location</b> = <b>/Users/TEMP_ADMIN_ACCOUNT</b> (use the same name as the TEMP_ADMIN_ACCOUNT variable in the script)<br><br>
       - <b>Check box to "Allow user to administer computer"</b><br><br>
 
 <b>Thats all!</b><br><br>
