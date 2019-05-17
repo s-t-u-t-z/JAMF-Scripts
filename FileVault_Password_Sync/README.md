@@ -8,7 +8,7 @@ Usually this happens when the user changes their password outside System Prefere
 password reset system).  To fix the issue the user needs to be removed from FileVault enabled users list and add their account
 back.  This script will do all the heavy lifting for you.<br>
 
-<h3>Do The Following:</h3>
+<h1>Do The Following:</h1>
 (1) Add the "FileVault_Password_Sync.sh" script to your JPS (JAMF Pro Server)<br><br>
 (2) There are four variables that need to be edited in the script.  Find the "Script variables (EDIT)" section:<br>
 <img src="https://github.com/stuutz/JAMF-Scripts/blob/master/FileVault_Password_Sync/edit_script_variables1.png">
