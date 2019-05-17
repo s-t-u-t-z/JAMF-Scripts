@@ -12,7 +12,6 @@ back.  This script will do all the heavy lifting for you.<br>
 (1) Add the "FileVault_Password_Sync.sh" script to your JPS (JAMF Pro Server)<br><br>
 (2) There are four variables that need to be edited in the script.  Find the "Script variables (EDIT)" section:<br>
 <img src="https://github.com/stuutz/JAMF-Scripts/blob/master/FileVault_Password_Sync/edit_script_variables1.png">
-<br>
 ------> <b>adminUser="MANAGEMENT_ACCOUNT"</b>     -- Replace "MANAGEMENT_ACCOUNT" with the management account on your Macs in your environment<br><br>
 ------> <b>tempADMuser="TEMP_ADMIN_ACCOUNT"</b>   -- Replace "TEMP_ADMIN_ACCOUNT" with the name of a temp admin account (note: this account will be deleted at the end of the script)<br><br>
 ------> <b>tempADMpass="TEMP_ADMIN_PASSWORD"</b>  -- Replace "TEMP_ADMIN_PASSWORD" with a password you want to use for the temp account<br><br>
@@ -43,6 +42,6 @@ This is a brief explaination of the script process:<br><br>
 <b>(function confirmUserFVEnabled)</b> - Verify the "Logged in user's account" has been added to FileVault.<br>
 
 <h3>Notes:</h3>
-The "TEMP_ADMIN_ACCOUNT", "TEMP_ADMIN_PASSWORD" and the logged in user's username and password will be exported in PLAIN TEXT to the plist (XML) file.  Once the plist file has been used to add the user to FileVault its file contents are overwritten, renamed, permissions changed, and then deleted.   This process happens pretty quick but there is a slight chance it can be copied if the user knows where its saved.  By default its saved to the "/tmp" folder.  Change the location if you want to bury it deeper.<br>
+The "TEMP_ADMIN_ACCOUNT", "TEMP_ADMIN_PASSWORD" and the logged in user's username and password will be exported in PLAIN TEXT to the plist (XML) file.  Once the plist file has been used to add the user to FileVault its file contents are overwritten, renamed, permissions changed, and then deleted.   This process happens pretty quick but there is a slight chance it can be copied if the user knows where its saved.  By default its saved to the "/tmp" folder.  Change the location if you want to bury it deeper.<br><br>
 If you want to add more security to the script look at: https://github.com/jamf/Encrypted-Script-Parameters
 
