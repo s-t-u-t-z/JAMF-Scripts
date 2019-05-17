@@ -18,8 +18,8 @@ back.  This script will do all the heavy lifting for you.<br>
 ------> <b>Scripts</b> <br><br>
 ------------> Add the "FileVault_Password_Sync.sh" <br><br>
 ------------> Set priority to run "After"<br><br>
-------------> <b>Local Accounts</b>  <br><br>
-------> Create New Account<br><br>
+------> <b>Local Accounts</b>  <br><br>
+------------> Create New Account<br><br>
 ------------> <b>Username</b> = Same name that was entered into the script for the TEMP_ADMIN_ACCOUNT variable<br><br>
 ------------> <b>Fullname</b> = Same name that was entered into the script for the TEMP_ADMIN_ACCOUNT variable<br><br>
 ------------> <b>Password</b> = Same password that was entered into the script for the TEMP_ADMIN_PASSWORD variable<br><br>
