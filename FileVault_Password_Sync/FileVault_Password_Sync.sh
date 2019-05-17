@@ -4,11 +4,11 @@
 #
 # CREATED BY
 #
-#   Brian Stutzman
+#	Brian Stutzman
 #
 # DESCRIPTION
 #
-# 	Type: SELF SERVICE POLICY
+#	Type: SELF SERVICE POLICY
 #
 #	This script will remove (if currently enabled) the logged in users account from FileVault and
 #	then re-add the account back to FileVault. Ecryption must be completed in order for this script
@@ -106,21 +106,21 @@ function removeLoggedInUserFromFV()
 	# FileVault Removal Process
   if [ "${userCheck}" == "${userName}" ]; then
 
-	   fdesetup remove -user $userName
+	fdesetup remove -user $userName
 
      "$jamfHelper" -windowType "$type" -description "User (${userName}) was removed from FileVault." \
      -button1 "$button" -icon "$icon1" -lockHUD
 
-     echo "(${userName}) was removed from FileVault."
+	echo "(${userName}) was removed from FileVault."
 
   else
 
     "$jamfHelper" -windowType "$type" -description "User (${userName}) is not currently FileVault enabled." \
     -button1 "$button" -icon "$icon1" -lockHUD
 
-    echo "(${userName}) is not currently FileVault enabled."
+	echo "(${userName}) is not currently FileVault enabled."
 
-	fi
+  fi
 }
 
 
@@ -130,19 +130,19 @@ function addLoggedInUserToFV()
 	# Ask for the "adminUser" account password via AppleScript prompt
 	adminUserPass="$(osascript -e 'Tell application "System Events" to display dialog "Enter the password for ('$adminUser'):" default answer "" with text buttons {"OK"} default button 1 with icon file "System:Library:PreferencePanes:Security.prefPane:Contents:Resources:FileVault.icns" with hidden answer' -e 'text returned of result')"
 
-  # Ask for the "logged in user's" account password via AppleScript prompt
-  userPass="$(osascript -e 'Tell application "System Events" to display dialog "Enter current password for ('${userName}'):" default answer "" with text buttons {"OK"} default button 1 with icon file "System:Library:PreferencePanes:Security.prefPane:Contents:Resources:FileVault.icns" with hidden answer' -e 'text returned of result')"
+	# Ask for the "logged in user's" account password via AppleScript prompt
+	userPass="$(osascript -e 'Tell application "System Events" to display dialog "Enter current password for ('${userName}'):" default answer "" with text buttons {"OK"} default button 1 with icon file "System:Library:PreferencePanes:Security.prefPane:Contents:Resources:FileVault.icns" with hidden answer' -e 'text returned of result')"
 
 	# Get Secure Token for "tempADMuser" account
 	sysadminctl -adminUser "$adminUser" -adminPassword "$adminUserPass" -secureTokenOn "$tempADMuser" -password "$tempADMpass"
 
-  sleep 2
+	sleep 2
 
-  # Get Secure Token for "logged in user's" account
+	# Get Secure Token for "logged in user's" account
 	sysadminctl -adminUser "$tempADMuser" -adminPassword "$tempADMpass" -secureTokenOn "$userName" -password "$userPass"
 
-  # Make directory for plist file
-  mkdir /tmp/$plistFolder
+	# Make directory for plist file
+	mkdir /tmp/$plistFolder
 
 # Create the plist file:
 echo '<?xml version="1.0" encoding="UTF-8"?>
@@ -211,10 +211,11 @@ echo '<?xml version="1.0" encoding="UTF-8"?>
 
 	sleep 3
 
-  # Delete "tempADMuser" account
-  dscl . delete /Users/$tempADMuser
-  # Delete "tempADMuser" Home folder
-  rm -rf /Users/$tempADMuser
+	# Delete "tempADMuser" account
+	dscl . delete /Users/$tempADMuser
+	
+	# Delete "tempADMuser" Home folder
+	rm -rf /Users/$tempADMuser
 }
 
 
@@ -229,7 +230,7 @@ function updateFVPrebootScreen()
 function confirmUserFVEnabled()
 {
 	## Verifies the account was enabled for FileVault successfully
-  fvuserCheck=`fdesetup list | awk -v usrN="$userName" -F, 'index($0, usrN) {print $1}' | grep -c "$userName"`
+	fvuserCheck=`fdesetup list | awk -v usrN="$userName" -F, 'index($0, usrN) {print $1}' | grep -c "$userName"`
 
 	if [ "${fvuserCheck}" == "1" ]; then
 
@@ -237,27 +238,27 @@ function confirmUserFVEnabled()
     userChoice=$("$jamfHelper" -windowType "$type" -description "Successfully added (${userName}) to FileVault." \
     -button1 "$button" -button2 "Reboot" -icon "$icon1" -lockHUD)
 
-    echo "Successfully added (${userName}) to FileVault."
+	echo "Successfully added (${userName}) to FileVault."
 
-    	if [ "$userChoice" == "2" ]; then
+    		if [ "$userChoice" == "2" ]; then
 
-			     echo ">> User Clicked Reboot"
+			echo ">> User Clicked Reboot"
 
-           # Reboot with a 1 minute delay timer
-           shutdown -r +1 &
+			# Reboot with a 1 minute delay timer
+			shutdown -r +1 &
 
         	# Display jamfHelper message
         	"$jamfHelper" -windowType hud -lockHUD -title "" \
   			-icon "$icon1" -description "The computer will reboot shortly." \
         	-timeout 57 -countdown -countdownPrompt "" -alignCountdown right &
 
-          exit 0
+			exit 0
 
 		else
 
-        	echo ">> User Clicked Close"
+        		echo ">> User Clicked Close"
 
-        	exit 0
+        		exit 0
 
 		fi
 
@@ -271,11 +272,11 @@ Please make sure the current password is being entered.
 Contact the Service Desk if this error continues." \
     -button1 "$button" -icon "$icon2" -lockHUD
 
-    echo "Failed adding (${userName}) to FileVault."
+    		echo "Failed adding (${userName}) to FileVault."
 
-    exit 1
+    		exit 1
 
-  fi
+  	fi
 }
 
 
