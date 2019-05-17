@@ -1,4 +1,4 @@
-﻿#!/bin/bash
+#!/bin/bash
 
 ####################################################################################################
 #
@@ -60,6 +60,7 @@ icon2="/System/Library/CoreServices/Problem Reporter.app/Contents/Resources/Prob
 adminUser="MANAGEMENT_ACCOUNT"
 tempADMuser="TEMP_ADMIN_ACCOUNT"
 tempADMpass="TEMP_ADMIN_PASSWORD"
+plistFolder=".HiddenTempFolder"
 
 
 ##################################################################
@@ -140,6 +141,9 @@ function addLoggedInUserToFV()
   # Get Secure Token for "logged in user's" account
 	sysadminctl -adminUser "$tempADMuser" -adminPassword "$tempADMpass" -secureTokenOn "$userName" -password "$userPass"
 
+  # Make directory for plist file
+  mkdir /tmp/$plistFolder
+
 # Create the plist file:
 echo '<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -159,10 +163,10 @@ echo '<?xml version="1.0" encoding="UTF-8"?>
     </dict>
 </array>
 </dict>
-</plist>' > /tmp/DV03ES7J-9FC93EX2-LAPEX03B-QWLZ02ZV.plist
+</plist>' > /tmp/$plistFolder/DV03ES7J-9FC93EX2-LAPEX03B-QWLZ02ZV.plist
 
 	# Add account to FileVault based on plist info
-	fdesetup add -inputplist < /tmp/DV03ES7J-9FC93EX2-LAPEX03B-QWLZ02ZV.plist
+	fdesetup add -inputplist < /tmp/$plistFolder/DV03ES7J-9FC93EX2-LAPEX03B-QWLZ02ZV.plist
 }
 
 
@@ -188,22 +192,22 @@ echo '<?xml version="1.0" encoding="UTF-8"?>
     </dict>
 </array>
 </dict>
-</plist>' > /tmp/DV03ES7J-9FC93EX2-LAPEX03B-QWLZ02ZV.plist
+</plist>' > /tmp/$plistFolder/DV03ES7J-9FC93EX2-LAPEX03B-QWLZ02ZV.plist
 
 	# Create directory, move plist file, change file permission/owner, remove directory
-	mkdir /tmp/FK42V502-DT4HDA36-20LSX0E1-EWC0R5M2
+	mkdir /tmp/$plistFolder/FK42V502-DT4HDA36-20LSX0E1-EWC0R5M2
 
-	mv /tmp/DV03ES7J-9FC93EX2-LAPEX03B-QWLZ02ZV.plist /tmp/FK42V502-DT4HDA36-20LSX0E1-EWC0R5M2
+	mv /tmp/$plistFolder/DV03ES7J-9FC93EX2-LAPEX03B-QWLZ02ZV.plist /tmp/$plistFolder/FK42V502-DT4HDA36-20LSX0E1-EWC0R5M2
 
-	chmod 444 /tmp/FK42V502-DT4HDA36-20LSX0E1-EWC0R5M2
+	chmod 444 /tmp/$plistFolder/FK42V502-DT4HDA36-20LSX0E1-EWC0R5M2
 
-	chmod 444 /tmp/FK42V502-DT4HDA36-20LSX0E1-EWC0R5M2/DV03ES7J-9FC93EX2-LAPEX03B-QWLZ02ZV.plist
+	chmod 444 /tmp/$plistFolder/FK42V502-DT4HDA36-20LSX0E1-EWC0R5M2/DV03ES7J-9FC93EX2-LAPEX03B-QWLZ02ZV.plist
 
-	chown root:admin /tmp/FK42V502-DT4HDA36-20LSX0E1-EWC0R5M2
+	chown root:admin /tmp/$plistFolder/FK42V502-DT4HDA36-20LSX0E1-EWC0R5M2
 
-	chown root:admin /tmp/FK42V502-DT4HDA36-20LSX0E1-EWC0R5M2/DV03ES7J-9FC93EX2-LAPEX03B-QWLZ02ZV.plist
+	chown root:admin /tmp/$plistFolder/FK42V502-DT4HDA36-20LSX0E1-EWC0R5M2/DV03ES7J-9FC93EX2-LAPEX03B-QWLZ02ZV.plist
 
-	rm -rf /tmp/FK42V502-DT4HDA36-20LSX0E1-EWC0R5M2
+	rm -rf /tmp/$plistFolder
 
 	sleep 3
 
