@@ -1,5 +1,6 @@
-<h1>Install macOS Updates</h1>
+<h1>Install macOS Updates (two different script options)</h1>
 
+<u>Policy Script:</u>
 This script has the following features:<br>
 - Installs all available software updates.<br>
 - If there ARE software updates it will inform the user which updates will be installed.<br>
@@ -8,6 +9,14 @@ This script has the following features:<br>
 - To initiate the install of updates the user has to click the "Install" button.<br>
 - This script is designed to handle reboots for T2 chips machines by way of the shutdown command so updates (ex: security updates) install correctly.<br><br>
 
+<u>Self Service Script:</u>
+This script has the following features:
+- If there ARE software updates the user will be informed which updates are available.
+- If there are NO updates available, the user will be informed.
+- The user will be informed IF any updates require a reboot.
+- To initiate the install of updates the user has to click the "Install" button.
+- This script is designed to handle reboots for T2 chips machines by way of the shutdown
+command so updates (ex: security updates) install correctly.<br><br>
 
 <h3>Setup</h3>
 1) Add the "PATCHING - macOS Updates.sh" script to your JPS server<br>
