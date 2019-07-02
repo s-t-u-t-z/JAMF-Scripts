@@ -40,11 +40,11 @@ jamfHelper="/Library/Application Support/JAMF/bin/jamfHelper.app/Contents/MacOS/
 chip=$( system_profiler SPiBridgeDataType | grep "chip\|Chip" | awk '{print$4}' )
 
 if [ "$osVersion" = "10.14" ]; then
-# >= 10.14
-icon="/System/Library/PreferencePanes/SoftwareUpdate.prefPane/Contents/Resources/SoftwareUpdate.icns"
+	# >= 10.14
+	icon="/System/Library/PreferencePanes/SoftwareUpdate.prefPane/Contents/Resources/SoftwareUpdate.icns"
 else
-# < 10.14
-icon="/Applications/App Store.app/Contents/Resources/AppIcon.icns"
+	# < 10.14
+	icon="/Applications/App Store.app/Contents/Resources/AppIcon.icns"
 fi
 
 ##################################################################
@@ -55,47 +55,47 @@ reboot ()
 	# Determine if reboot is required (from SWU.log), if not show completion message
 	if [ "$(grep "restart" $log)" ]; then
 
-    	echo "Script >> Reboot required.  Determining type of reboot needed."
+    		echo "Script >> Reboot required.  Determining type of reboot needed."
 
-        sleep 3
+        	sleep 3
 
-        # Delete the SWU log file
-    	rm -rf $log
+        	# Delete the SWU log file
+    		rm -rf $log
 
-    else
+	else
 
-        echo "Script >> No reboot required.  Exiting script..."
+        	echo "Script >> No reboot required.  Exiting script..."
 
-        sleep 3
+        	sleep 3
 
-       	# Delete the SWU log file
-    	rm -rf $log
+       		# Delete the SWU log file
+    		rm -rf $log
 
 		# Display jamfHelper message
-       	"$jamfHelper" -windowType hud -lockHUD -title "Software Update Manager" \
+       		"$jamfHelper" -windowType hud -lockHUD -title "Software Update Manager" \
   		-icon "$icon" -description "Updates have been installed." -button1 "CLOSE" -defaultButton 0
 
-        # Exit script
+        	# Exit script
 		exit 0
 
-    fi
+	fi
 
-    # Machines that have a T2 chip
+	# Machines that have a T2 chip
 	if [ "$chip" = "T2" ]; then
 
 		echo "Script >> T2 chip found, shutting down."
 
-        # Shutdown with a 1 minute delay timer
-    	shutdown -h +1 &
+		# Shutdown with a 1 minute delay timer
+		shutdown -h +1 &
 
-        # Display jamfHelper message
-        "$jamfHelper" -windowType hud -lockHUD -title "Software Update Manager" \
+		# Display jamfHelper message
+		"$jamfHelper" -windowType hud -lockHUD -title "Software Update Manager" \
   		-icon "$icon" -description "The computer will shutdown to finish installing updates.
 
 Press the power button after the computer turns off." \
-        -timeout 57 -countdown -countdownPrompt "" -alignCountdown right
+-timeout 57 -countdown -countdownPrompt "" -alignCountdown right
 
-        # Exit script
+		# Exit script
 		exit 0
 
 	else
@@ -103,18 +103,18 @@ Press the power button after the computer turns off." \
 		# Machines that do not have a T2 chip
 		echo "Script >> Standard Reboot."
 
-        # Reboot with a 1 minute delay timer
-    	shutdown -r +1 &
+		# Reboot with a 1 minute delay timer
+		shutdown -r +1 &
 
-        # Display jamfHelper message
-        "$jamfHelper" -windowType hud -lockHUD -title "Software Update Manager" \
+		# Display jamfHelper message
+        	"$jamfHelper" -windowType hud -lockHUD -title "Software Update Manager" \
   		-icon "$icon" -description "The computer will reboot to finish installing updates." \
-        -timeout 57 -countdown -countdownPrompt "" -alignCountdown right
+        	-timeout 57 -countdown -countdownPrompt "" -alignCountdown right
 
-        # Exit script
+		# Exit script
 		exit 0
 
-    fi
+	fi
 
 	# Exit script
 	exit 0
@@ -125,24 +125,24 @@ Press the power button after the computer turns off." \
 ##################################################################
 installUpdates ()
 {
-    # Caffinate the update process
-    caffeinate -d -i -m -u &
-    caffeinatepid=$!
+	# Caffinate the update process
+	caffeinate -d -i -m -u &
+	caffeinatepid=$!
 
-    # Display jamfHelper message
-    "$jamfHelper" -windowType hud -description "Downloading and Installing Updates, this may take some time..." \
-    -icon "$icon" -lockHUD > /dev/null 2>&1 &
+	# Display jamfHelper message
+	"$jamfHelper" -windowType hud -description "Downloading and Installing Updates, this may take some time..." \
+	-icon "$icon" -lockHUD > /dev/null 2>&1 &
 
 	# Install all updates
 	softwareupdate -ia
 
-    # Kill jamfhelper
-    killall jamfHelper > /dev/null 2>&1
+	# Kill jamfhelper
+	killall jamfHelper > /dev/null 2>&1
 
-    # Kill the caffinate process
-    kill "$caffeinatepid"
+	# Kill the caffinate process
+	kill "$caffeinatepid"
 
-    echo "Script >> All updates have been installed."
+	echo "Script >> All updates have been installed."
 }
 
 ##################################################################
@@ -185,33 +185,33 @@ $rebootStatus" \
 
 	if [ "$userChoice" == "0" ]; then
 
-        echo "Script >> Installing $secho"
+        	echo "Script >> Installing $secho"
 
-        installUpdates
+        	installUpdates
 
 		reboot
 
-    elif [ "$userChoice" == "2" ]; then
+		elif [ "$userChoice" == "2" ]; then
 
-        echo "Script >> User Canceled"
+        		echo "Script >> User Canceled"
 
-        # Delete the SWU log file
+        		# Delete the SWU log file
+			rm -rf $log
+
+			# Exit script
+			exit 0
+
+		fi
+
+	else
+
+    		"$jamfHelper" -windowType hud -lockHUD -title "Found ($updateCount) macOS Updates" -heading "Software Update Manager" \
+    		-icon "$icon" -description "No Updates Found." -button1 "CLOSE" -defaultButton 0 -lockHUD
+
+		# Delete the SWU log file
 		rm -rf $log
 
 		# Exit script
 		exit 0
 
-    fi
-
-else
-
-    "$jamfHelper" -windowType hud -lockHUD -title "Found ($updateCount) macOS Updates" -heading "Software Update Manager" \
-    -icon "$icon" -description "No Updates Found." -button1 "CLOSE" -defaultButton 0 -lockHUD
-
-	# Delete the SWU log file
-    rm -rf $log
-
-	# Exit script
-	exit 0
-
-fi
+	fi
