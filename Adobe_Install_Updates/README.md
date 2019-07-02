@@ -26,4 +26,4 @@ If there are no Adobe updates available the user will see this window.<br><br>
 <img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Adobe_Install_Updates/Images/Window_no_updates.png">
 
 <h3>NOTES</h3>
-- To make the JAMF Helper window look better to the user, package up all the Adobe Icons and add them to the policy.  That way during the download/install process it displays the icon of the update that is currently being installed.  See the actual script for more information.
+- To make the JAMF Helper window look more presentable to the user, package up all the Adobe Icons and add them to the policy.  That way during the download/install process it displays the app icon of the update that is currently being installed.  See the script for more information.
