@@ -22,7 +22,7 @@ A confirmation window will appear once all updates are completed.<br><br>
 <img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Adobe_Install_Updates/Images/Window_updates_completed.png">
 
 <b>(4.1) Confirmation window (No Updates):</b><br>
-A confirmation window will appear once all updates are completed.<br><br>
+If there are no Adobe updates available the user will see this window.<br><br>
 <img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Adobe_Install_Updates/Images/Window_no_updates.png">
 
 <h3>NOTES</h3>
