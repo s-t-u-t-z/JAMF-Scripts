@@ -18,7 +18,7 @@ This script has the following features:
 - This script is designed to handle reboots for T2 chips machines by way of the shutdown
 command so updates (ex: security updates) install correctly.<br><br>
 
-<h3>Setup</h3>
+<h3>Setup Instructions for Policy Script</h3>
 1) Add the "PATCHING - macOS Updates.sh" script to your JPS server<br>
 2) Policy settings should be set to "Recurring Check-in" and set to "Once per computer"<br>
 3) Set script to run "After"<br>
