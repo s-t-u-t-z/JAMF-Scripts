@@ -7,8 +7,8 @@ allow user to confirm information is correct.</h3>
 <b>(1) User will be prompted to enter Asset Tag:</b>
 <img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Set_Asset_Tag/Images/Asset_Tag_Prompt.png">
 
-<b>(2) User is prompted to confirm information:</b>
+<b>(2) User is prompted to confirm information:</b><br>
 <img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Set_Asset_Tag/Images/Asset_Tag_Confirmation.png">
 
-<b>(3) Asset Tag will be uploaded to JAMF:</b><br>
+<b>(3) Asset Tag will be uploaded to JAMF:</b><br><br>
 <img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Set_Asset_Tag/Images/Asset_Tag_sent_to_JAMF.png">
