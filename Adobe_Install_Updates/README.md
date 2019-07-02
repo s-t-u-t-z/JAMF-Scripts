@@ -12,7 +12,7 @@ file and dump its contents to it.<br><br>
 Using the JAMF Helper window the script will pick out the avaiable updates in the RUM log and clean up the wording.<br><br>
 <img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Adobe_Install_Updates/Images/Window_available_updates.png">
 
-<b>(3) Window will appear doing the downloading/install of the update:</b><br>
+<b>(3) Window will appear duing the downloading/install of the update:</b><br>
 While the update is downloading and installing the JAMF Helper window will stay open.  Once the update has completed it will
 close.<br><br>
 <img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Adobe_Install_Updates/Images/Window_progress_update.png">
@@ -24,3 +24,6 @@ A confirmation window will appear once all updates are completed.<br><br>
 <b>(4.1) Confirmation window (No Updates):</b><br>
 A confirmation window will appear once all updates are completed.<br><br>
 <img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Adobe_Install_Updates/Images/Window_no_updates.png">
+
+<h3>NOTES</h3>
+- To make the JAMF Helper window look better to the user, package up all the Adobe Icons and add them to the policy.  That way during the download/install process it displays the icon of the update that is currently being installed.  See the actual script for more information.
