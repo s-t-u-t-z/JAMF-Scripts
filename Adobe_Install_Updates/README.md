@@ -12,7 +12,7 @@ file and dump its contents to it.<br><br>
 Using the JAMF Helper window the script will pick out the avaiable updates in the RUM log and clean up the wording.<br><br>
 <img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Adobe_Install_Updates/Images/Window_available_updates.png">
 
-<b>(3) Window will appear duing the downloading/install of the update:</b><br>
+<b>(3) Window will appear during the downloading/install of the update:</b><br>
 While the update is downloading and installing the JAMF Helper window will stay open.  Once the update has completed it will
 close.<br><br>
 <img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Adobe_Install_Updates/Images/Window_progress_update.png">
@@ -26,6 +26,6 @@ If there are no Adobe updates available the user will see this window.<br><br>
 <img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Adobe_Install_Updates/Images/Window_no_updates.png">
 
 <h3>NOTES</h3>
---  To make the JAMF Helper window look more presentable to the user, package up all the Adobe Icons and add them to the policy.  That way during the download/install process it displays the app icon of the update that is currently being installed.  See the script for more information.<br><br>
+--  To make the JAMF Helper window look more presentable to the user, package up all the Adobe icons and add them to the policy.  That way during the download/install process it displays the app icon of the update that is currently being installed.  See the script for more information.<br><br>
 --  If using the Policy version of the script the user will only be prompted with windows if there are updates available.  The user will have to click "Install" in order to start the update process but they will not be given the option to "cancel".<br><br>
 --  If using the Self Service version the user will be allowed to "cancel" the update process.
