@@ -58,10 +58,10 @@ if [ "$?" != "0" ] ; then
     
 else
 
-	# If OK button is clicked
+	# If YES button is clicked
 	echo "Applying asset tag ${assetTag} to computer ${compName}"
 	
-  jamf recon -assetTag $assetTag
+	jamf recon -assetTag $assetTag
     
 fi
 
