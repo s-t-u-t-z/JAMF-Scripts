@@ -1,4 +1,4 @@
-<h1>Install macOS Updates (two different script options)</h1>
+<h1>Install macOS Updates (two script options)</h1>
 
 <b>Policy Script:</b><br>
 This script has the following features:<br>
