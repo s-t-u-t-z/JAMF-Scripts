@@ -1,7 +1,7 @@
 <h1>Adobe - Install Updates</h1>
 
 <h3>There are two version of this script one for a Policy that can run during normal patching window.  
-The other is a Self Service policy that can be ran anytime.
+The other is a Self Service policy that can be ran anytime.</h3>
 
 <b>(1) RUM Log (/var/tmp):</b>
 The RUM (Remote Update Manager) command is used to determine what updates are availabe.  It will then
