@@ -1,6 +1,6 @@
 <h1>Adobe - Install Updates</h1>
 
-<h3>There are two version of this script one for a Policy that can be ran during a patching window.  
+<h3>There are two version of this script one for a normal Policy that can be ran during a patching window.  
 The other is a Self Service policy that can be ran anytime.</h3><br>
 
 <b>(1) RUM Log (/var/tmp):</b><br>
