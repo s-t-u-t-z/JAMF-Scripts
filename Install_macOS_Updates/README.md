@@ -22,24 +22,24 @@ command so updates (ex: security updates) install correctly.<br><br>
 1) Add the "PATCHING - macOS Updates.sh" script to your JPS server<br>
 2) Policy settings should be set to "Recurring Check-in" and set to "Once per computer"<br>
 3) Set script to run "After"<br>
-<img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Install_macOS_Updates/PolicyGeneralSettings.png">
-<img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Install_macOS_Updates/ScriptPolicy.png">
+<img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Install_macOS_Updates/Images/PolicyGeneralSettings.png">
+<img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Install_macOS_Updates/Images/ScriptPolicy.png">
 
 <h3>What the user will see</h3>
 Window will appear showing the updates that will install:<br><br>
 Reboot Required:<br>
-<img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Install_macOS_Updates/ShowUpdates-reboot.png">
+<img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Install_macOS_Updates/Images/ShowUpdates-reboot.png">
 Reboot NOT Required:<br>
-<img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Install_macOS_Updates/ShowUpdates-noreboot.png">
+<img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Install_macOS_Updates/Images/ShowUpdates-noreboot.png">
 
 Window will be present while updates download/install:<br><br>
-<img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Install_macOS_Updates/UpdateStatus.png">
+<img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Install_macOS_Updates/Images/UpdateStatus.png">
 
 Window will change to count down if updates require a reboot:<br><br>
-<img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Install_macOS_Updates/RebootCountDown.png">
+<img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Install_macOS_Updates/Images/RebootCountDown.png">
 
 Window will appear if NO reboot is required:<br><br>
-<img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Install_macOS_Updates/UpdatesCompleted-noreboot.png">
+<img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Install_macOS_Updates/Images/UpdatesCompleted-noreboot.png">
 
 <h3>Note</h3>
 The policy will show as "Pending" after the policy has ran on the machine.  This will only happen if there is an update that requires a reboot.  Meaning the policy will run a second time on the computer.  This is "ok" because if there are additional updates to run it will run through the policy again. If there are no updates, the policy will show as "Completed.  If there are updates that DO NOT require a reboot the policy will show as "Completed".
