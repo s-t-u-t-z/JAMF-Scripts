@@ -4,12 +4,12 @@
 The other is a Self Service policy that can be ran anytime.</h3><br>
 
 <b>(1) RUM Log (/var/tmp):</b><br>
-The RUM (Remote Update Manager) command is used to determine what updates are availabe.  The script will create a log
+The RUM (Remote Update Manager) command is used to determine what updates are available.  The script will create a log
 file and dump its contents to it.<br><br>
 <img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Adobe_Install_Updates/Images/RUM_Log.png">
 
 <b>(2) User is prompted informing of available updates:</b><br>
-Using the JAMF Helper window the script will pick out the avaiable updates in the RUM log and clean up the wording.<br><br>
+Using the JAMF Helper window the script will pick out the available updates in the RUM log and clean up the wording.<br><br>
 <img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Adobe_Install_Updates/Images/Window_available_updates.png">
 
 <b>(3) Window will appear during the downloading/install of the update:</b><br>
