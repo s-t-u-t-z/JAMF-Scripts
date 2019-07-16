@@ -9,11 +9,11 @@
 # DESCRIPTION
 #
 #	1 - Package the MigrateADMobileAccounttoLocalAccount.command file into the "/var/tmp" folder. 
-#		Link to file is found below under resources.
+#	    Link to file is found below under resources.
 #	2 - Upload package to JAMF Pro.
 #	3 - Add this script to JAMF Pro, set to run "After".
 #	4 - Create a Self Service policy to install the .command package file.  Add this script to the
-#		policy and ensure it runs after the package gets installed.
+#	    policy and ensure it runs after the package gets installed.
 #	5 - Use a computer with Active Directory bound and an exisiting mobile user added.
 #	6 - Ensure when the policy is ran by an admin (requires sudo rights).
 #
@@ -27,7 +27,7 @@
 #
 # CHANGE HISTORY
 #
-# 	- Created script - 7/12/19 (1.0)
+# 	- Created script - 7/16/19 (1.0)
 #
 ####################################################################################################
 
@@ -84,7 +84,7 @@ else
 
 	echo ">> FAILED! No admin account detected."
 
-    cleanUP
+	cleanUP
 
 	"$jamfHelper" -windowType hud -lockHUD -description "This needs to be ran from an admin account with elevated rights." \
   	-icon "$icon2" -button1 "QUIT" -lockHUD
