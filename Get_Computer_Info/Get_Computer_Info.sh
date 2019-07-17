@@ -116,8 +116,9 @@ en5MAC=`ifconfig en5 | awk '/ether/{print $2}'`
 en8MAC=`ifconfig en8 | awk '/ether/{print $2}'`
 userName=`python -c 'from SystemConfiguration import SCDynamicStoreCopyConsoleUser; import sys; username = (SCDynamicStoreCopyConsoleUser(None, None, None) or [None])[0]; username = [username,""][username in [u"loginwindow", None, u""]]; sys.stdout.write(username + "\n");'`
 fullName=`finger | grep "$userName" | sed -n 1p | awk '{print $2,$3}'`
-diskInfo=`df -iH / | grep /dev/disk1s1 | awk '{print $2}'`
-diskInfoFree=`df -iH / | grep /dev/disk1s1 | awk '{print $4}'`
+bootDisk=`bless --getBoot`
+diskInfo=`df -iH / | grep $bootDisk | awk '{print $2}'`
+diskInfoFree=`df -iH / | grep $bootDisk | awk '{print $4}'`
 upTime=`uptime | awk '{print $3}' | tr -d ','`
 jamfCheck=`jamf checkJSSConnection | grep The | awk '{print $4}' | tr -d '.'`
 modelInfo=`sysctl hw.model | awk '{print $2}'`
@@ -144,7 +145,6 @@ sleepStatus=`systemsetup -getcomputersleep | awk '{print $3}'`
 timeZone=`systemsetup -gettimezone | awk '{print $3}'`
 remoteLogin=`systemsetup -getremotelogin | awk '{print $3}'`
 fileSystem=`diskutil list | grep "$fileSystemName" | awk '{print $2}'`
-bootDisk=`bless --getBoot`
 
 
 ##################################################################
