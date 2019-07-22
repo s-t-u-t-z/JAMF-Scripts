@@ -226,19 +226,19 @@ fi
 
 
 if [ -d "/Applications/QualysCloudAgent.app" ]; then
-	qcaVersion=$(defaults read /Applications/QualysCloudAgent.app/Contents/Info.plist CFBundleShortVersionString)
+    qcaVersion=$(defaults read /Applications/QualysCloudAgent.app/Contents/Info.plist CFBundleShortVersionString)
     qcaStatus="$qcaVersion"
 else
-	qcaVersion="n/a"
+    qcaVersion="n/a"
     qcaStatus="$qcaVersion"
 fi
 
 
 if [ -d "/Library/CS" ]; then
-	csVersion=$(sysctl cs | grep "cs.version:" | awk '{print $2}')
+    csVersion=$(sysctl cs | grep "cs.version:" | awk '{print $2}')
     csStatus="$csVersion"
 else
-	csVersion="n/a"
+    csVersion="n/a"
     csStatus="$csVersion"
 fi
 
@@ -252,7 +252,7 @@ fi
 
 
 gateKeeper=`spctl --status | awk '{print $2}'`
-if [ "$gateKeeper" = disabled ]; then
+if [ "$gateKeeper" = "disabled" ]; then
 	gatekeeperStatus="Off"
 else
 	gateKeeperStatus="On"
