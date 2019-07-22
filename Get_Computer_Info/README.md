@@ -1,6 +1,6 @@
 <h1>Get Computer Info</h1>
 
-<img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Get_Computer_Info/Images/Get_Computer_Info_ex1.png">
+<img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Get_Computer_Info/Images/Get_Computer_Info_ex2.png">
 
 Script Type: <b>Self Service Policy</b><br>
 
