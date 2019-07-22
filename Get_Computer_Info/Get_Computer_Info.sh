@@ -226,20 +226,20 @@ fi
 
 
 if [ -d "/Applications/QualysCloudAgent.app" ]; then
-    qcaVersion=$(defaults read /Applications/QualysCloudAgent.app/Contents/Info.plist CFBundleShortVersionString)
-    qcaStatus="$qcaVersion"
+	qcaVersion=$(defaults read /Applications/QualysCloudAgent.app/Contents/Info.plist CFBundleShortVersionString)
+	qcaStatus="$qcaVersion"
 else
-    qcaVersion="n/a"
-    qcaStatus="$qcaVersion"
+	qcaVersion="n/a"
+	qcaStatus="$qcaVersion"
 fi
 
 
 if [ -d "/Library/CS" ]; then
-    csVersion=$(sysctl cs | grep "cs.version:" | awk '{print $2}')
-    csStatus="$csVersion"
+	csVersion=$(sysctl cs | grep "cs.version:" | awk '{print $2}')
+	csStatus="$csVersion"
 else
-    csVersion="n/a"
-    csStatus="$csVersion"
+	csVersion="n/a"
+	csStatus="$csVersion"
 fi
 
 
