@@ -34,7 +34,6 @@ The following information will be displayed in a JAMF Message (jamfHelper) windo
 - Avaiable Software Updates
 - Serial Number
 - Firewall Status
-- Number of Admin Accounts (count)
 - CPU Type
 - Graphics Card (also reports on secondary card)
 - NTP Server (Network Time Protocol)
@@ -42,7 +41,14 @@ The following information will be displayed in a JAMF Message (jamfHelper) windo
 - Time Zone
 - Remote Login Status
 - File System Type (edit "fileSystemName" varaible)
-- Startup Disk
+- Gatekeeper Status
+- MRT Version
+- CrowdStrke Status
+- Qualys Status
+- Hard Drive Type
+- HD SMART Status
+- Full Computer Model Name
+- Administrator Accounts
 
 <h3>NOTE:</h3>
 The returned value of the varaibles will vary from machine to machine.  This will cause
