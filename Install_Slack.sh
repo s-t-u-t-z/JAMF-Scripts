@@ -16,11 +16,13 @@
 #
 # VERSION
 #
-#   - 1.0
+#   - 1.1
 #
 # CHANGE HISTORY
 #
 #   - Created script - 2/13/19 (1.0)
+#   - Slack stopped updating their release json file (https://downloads.slack-edge.com/mac_releases/releases.json).
+#     Replaced with new release page (https://slack.com/release-notes/mac/rss). - 8/14/19 (1.1)
 #
 ####################################################################################################
 
@@ -45,7 +47,7 @@ function CompareVersions ()
 {
     
 	# Get the latest Slack version
-	NewVersion=$(/usr/bin/curl -s 'https://downloads.slack-edge.com/mac_releases/releases.json' | grep -o "[0-9]\.[0-9]\.[0-9]" | tail -1)
+	NewVersion=$(/usr/bin/curl -sL 'https://slack.com/release-notes/mac/rss' | grep -o "Slack-[0-9]\.[0-9]\.[0-9]"  | cut -c 7-11 | head -n 1)
 
 	# Determine if app is currently installed, if so get version
 	if [[ -d '/Applications/Slack.app' ]]; then
