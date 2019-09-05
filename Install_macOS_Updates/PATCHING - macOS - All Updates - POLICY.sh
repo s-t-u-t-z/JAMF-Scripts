@@ -24,11 +24,12 @@
 #
 # SCRIPT VERSION
 #
-#  1.0
+#  1.1
 #
 # CHANGE HISTORY
 #
 # - Created - 12/21/18
+# - Modified the IF statement for the icon variable to support 10.15 - (1.1) - 9/5/19
 #
 ####################################################################################################
 
@@ -41,12 +42,12 @@ log=/var/tmp/SWU.log
 jamfHelper="/Library/Application Support/JAMF/bin/jamfHelper.app/Contents/MacOS/jamfHelper"
 chip=$( system_profiler SPiBridgeDataType | grep "chip\|Chip" | awk '{print$4}' )
 
-if [ "$osVersion" = "10.14" ]; then
-# >= 10.14
-icon="/System/Library/PreferencePanes/SoftwareUpdate.prefPane/Contents/Resources/SoftwareUpdate.icns"
-else
-# < 10.14
+if [ "$osVersion" = "10.13" ]; then
 icon="/Applications/App Store.app/Contents/Resources/AppIcon.icns"
+fi
+
+if [ "$osVersion" = "10.14" ] || [ "$osVersion" = "10.15" ]; then
+icon="/System/Library/PreferencePanes/SoftwareUpdate.prefPane/Contents/Resources/SoftwareUpdate.icns"
 fi
 
 ##################################################################
