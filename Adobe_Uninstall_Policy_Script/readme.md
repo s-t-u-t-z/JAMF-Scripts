@@ -2,6 +2,13 @@
 
 The purpose of this script was to create a way to notify the user that they have outdated apps installed and give them the option to Uninstall (or cancel).  This script specificially was used for Adobe Illustrator because the app name never changes (Adobe Illustrator.app) regardless of which version you are using.  So its makes it a little difficult to restrict a specific version without impacting all versions of the app.  In my case I wanted to delete all the old apps because they are showing up as having vulnerabilities.  So this is a round about way to restrict an app using JAMF policies.
 
+Script Highlights:
+- If the app process is currently running it will informs the user with a jamfHelper window.  The user will be given the option to uninstall or cancel<br>
+- If the application is not active it will silently uninstall the app<br>
+- The script has a secondary check to ensure a false positives from happening.  Example the computer was not dropped from the smart group even though the app is installed<br>
+- After each action in the script an inventory update will occurr to ensure computer is getting dropped from smart group so the policy doesn't keep running<br>
+
+
 <h3>SCRIPT DEMO VIDEO</h3>
 <a href ="https://github.com/stuutz/JAMF-Scripts/blob/master/Adobe_Uninstall_Policy_Script/Files/Adobe_Uninstall_Policy_Script_demo.mp4">Click Here</a>
 
@@ -26,5 +33,7 @@ Frequency: None<br></b>
 <i>Upload the uninstall package to JAMF Pro (not supplied).  Add the package to the policy.</i>
 <img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Adobe_Uninstall_Policy_Script/Files/uninstallerpackage1.png">
 
-When completed it should look like this:<br>
+When completed it should look like this in JAMF Pro:<br>
 <img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Adobe_Uninstall_Policy_Script/Files/workflow3.png">
+
+View the video to see what the user experiences.
