@@ -1,8 +1,10 @@
-<h1>Adobe - Install Updates</h1>
+<h1>Adobe Uninstall Policy Script</h1>
+
+<a href ="test.html">test</a>
 
 <video src="https://github.com/stuutz/JAMF-Scripts/blob/master/Adobe_App_Uninstall_Script/Adobe_App_Uninstall_Script_demo.mp4" width="320" height="200" controls preload></video>
 
-
+Adobe Uninstall Policy Script
 
 <h3>There are two version of this script one for a normal Policy that can be ran during a patching window.  
 The other is a Self Service policy that can be ran anytime.</h3><br>
