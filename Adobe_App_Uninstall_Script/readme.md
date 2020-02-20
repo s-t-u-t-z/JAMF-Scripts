@@ -1,5 +1,9 @@
 <h1>Adobe - Install Updates</h1>
 
+<video src="https://github.com/stuutz/JAMF-Scripts/blob/master/Adobe_Install_Updates/Images/RUM_Log.png" width="320" height="200" controls preload></video>
+
+
+
 <h3>There are two version of this script one for a normal Policy that can be ran during a patching window.  
 The other is a Self Service policy that can be ran anytime.</h3><br>
 
