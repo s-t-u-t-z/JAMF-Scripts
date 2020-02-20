@@ -5,25 +5,27 @@ The purpose of this script was to create a way to notify the user that they have
 <b>SCRIPT DEMO VIDEO</b><br>
 <a href ="https://github.com/stuutz/JAMF-Scripts/blob/master/Adobe_App_Uninstall_Script/Adobe_App_Uninstall_Script_demo.mp4">Click Here</a>
 
-<br><b>(1) CREATE A SMART GROUP</b><br>
+<br><b>Step (1) - CREATE A SMART GROUP</b><br>
+This smart group will report on the app and verion #
+
+<br><b>Step (2) - UPLOAD SCRIPT</b><br>
 This smart group will report on the app and verion #
 
 
-<b>JAMF POLICIES</b><br>
+<br><b>Step (3) - CREATE JAMF POLICIES</b><br>
+<img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Adobe_App_Uninstall_Script/workflow.png">
 There are two policies that need created for each app.
 
-Workflow:
-<img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Adobe_App_Uninstall_Script/workflow.png">
 
-(Policy 1) - User Notify Policy (script)
+<br>(Policy 1) - User Notify Policy (script)
 Scope:
 Trigger: Smart Group
 <img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Adobe_App_Uninstall_Script/policy_script_info.png">
 
-(Policy 2) - App Removal Policy (uninstall package)
+<br>(Policy 2) - App Removal Policy (uninstall package)
 Scope: All Computers
 Trigger: None
-<img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Adobe_App_Uninstall_Script/policy_script_info.png">
+<img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Adobe_App_Uninstall_Script/uninstallerpackage.png">
 
 
 
