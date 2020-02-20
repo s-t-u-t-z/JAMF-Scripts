@@ -5,13 +5,13 @@ The purpose of this script was to create a way to notify the user that they have
 <h3>SCRIPT DEMO VIDEO</h3>
 <a href ="https://github.com/stuutz/JAMF-Scripts/blob/master/Adobe_App_Uninstall_Script/Adobe_App_Uninstall_Script_demo.mp4">Click Here</a>
 
-<br><h3>Step (1) - CREATE A SMART GROUP</h3>
+<h3>Step (1) - CREATE A SMART GROUP</h3>
 <img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Adobe_App_Uninstall_Script/smartgroup.png">
 
-<br><h3>Step (2) - UPLOAD SCRIPT</h3>
+<h3>Step (2) - UPLOAD SCRIPT</h3>
 Upload the <i>JAMF_Message_PID_Kill_ADOBE_Uninstall.sh</i> script to JAMF Pro
 
-<br><h3>Step (3) - CREATE JAMF POLICIES</h3>
+<h3>Step (3) - CREATE JAMF POLICIES</h3>
 (Policy 1) - User Notify Policy (script)<br>
 <b>Scope: Smart Group (from step 1)<br>
 Trigger: Check-in<br>
