@@ -1,23 +1,34 @@
 <h1>Adobe Uninstall Policy Script</h1>
 
+<h3>The purpose of this script was to create a script that notifies the user that they have outdated apps installed and gives them the option to Uninstall (or cancel).  This script specificially was used for Adobe Illustrator because the app name never changes (Adobe Illustrator.app) regardless of which version you are using.  So its makes it a little difficult to restrict a specific version without impacting all versions of the app.  Thus making a restriction policy difficult.  Regardless in my case I wanted to delete all the old apps because they are showing up with vulnerabilities.So this is a round about way to create a restriction policy.</h3><br>
+
+
+
 <b>SCRIPT VIDEO DEMO</b><br>
 <a href ="https://github.com/stuutz/JAMF-Scripts/blob/master/Adobe_App_Uninstall_Script/Adobe_App_Uninstall_Script_demo.mp4">Click Here</a>
 
+<b>SMART GROUP</b><br>
+Create a smart group to report on the computers that have the app version installed
+
+
 <b>JAMF POLICIES</b><br>
+There are two policies that need created for each app.
 
 Workflow:
-<img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Adobe_Install_Updates/Images/RUM_Log.png">
+<img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Adobe_App_Uninstall_Script/workflow.png">
 
 (Policy 1) - User Notify Policy (script)
-<img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Adobe_Install_Updates/Images/RUM_Log.png">
+Scope:
+Trigger: Smart Group
+<img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Adobe_App_Uninstall_Script/policy_script_info.png">
 
 (Policy 2) - App Removal Policy (uninstall package)
+Scope: All Computers
+Trigger: None
+<img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Adobe_App_Uninstall_Script/policy_script_info.png">
 
 
 
-
-<h3>There are two version of this script one for a normal Policy that can be ran during a patching window.  
-The other is a Self Service policy that can be ran anytime.</h3><br>
 
 <b>(1) RUM Log (/var/tmp):</b><br>
 The RUM (Remote Update Manager) command is used to determine what updates are available.  The script will create a log
