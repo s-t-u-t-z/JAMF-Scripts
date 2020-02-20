@@ -4,10 +4,8 @@ The purpose of this script was to create a way to notify the user that they have
 
 Script Highlights:
 - If the app process is currently running it will inform the user with a jamfHelper window.  The user will be given the option to uninstall or cancel<br>
+- Gives the user the ability to save their work before the app quits<br>
 - If the application is not active it will silently uninstall the app<br>
-- The script has a secondary check to ensure a false positives from happening.  Example the computer was not dropped from the smart group even though the app is installed<br>
-- After each action in the script an inventory update will occurr to ensure computer is getting dropped from smart group so the policy doesn't keep running<br>
-
 
 <h3>SCRIPT DEMO VIDEO</h3>
 <a href ="https://github.com/stuutz/JAMF-Scripts/blob/master/Adobe_Uninstall_Policy_Script/Files/Adobe_Uninstall_Policy_Script_demo.mp4">Click Here</a>
