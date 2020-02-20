@@ -12,7 +12,7 @@ The purpose of this script was to create a way to notify the user that they have
 Upload the <i>JAMF_Message_PID_Kill_ADOBE_Uninstall.sh</i> script to JAMF Pro
 
 <br><h3>Step (3) - CREATE JAMF POLICIES</h3>
-<br>(Policy 1) - User Notify Policy (script)<br>
+(Policy 1) - User Notify Policy (script)<br>
 <b>Scope: Smart Group (from step 1)<br>
 Trigger: Check-in<br>
 Frequency: Ongoing<br></b>
