@@ -21,6 +21,7 @@ Upload the JAMF_Message_PID_Kill_ADOBE_Uninstall.sh script to JAMF Pro
 <b>Scope: Smart Group (from step 1)<br>
 Trigger: Check-in<br>
 Frequency: Ongoing<br></b>
+**NOTE** Leave the description blank<br>
 <img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Adobe_App_Uninstall_Script/policy_script_info.png">
 
 <br>(Policy 2) - App Removal Policy (uninstall package)<br>
