@@ -12,9 +12,7 @@ This smart group will report on the app and verion #
 <br><b><h3>Step (2) - UPLOAD SCRIPT</h3></b><br>
 Upload the <i>JAMF_Message_PID_Kill_ADOBE_Uninstall.sh</i> script to JAMF Pro
 
-
-<br><b><h3>Step (3) - CREATE JAMF POLICIES</h3></b><br>
-
+<br><b><h3>Step (3) - CREATE JAMF POLICIES</h3></b>
 <br>(Policy 1) - User Notify Policy (script)<br>
 <b>Scope: Smart Group (from step 1)<br>
 Trigger: Check-in<br>
