@@ -8,7 +8,7 @@ Script Highlights:
 - If the application is not active it will silently uninstall the app<br>
 
 <h3>SCRIPT DEMO VIDEO</h3>
-<a href ="https://github.com/stuutz/JAMF-Scripts/blob/master/Adobe_Uninstall_Policy_Script/Files/Adobe_Uninstall_Policy_Script_demo.mp4">Click Here</a>
+<a href ="https://github.com/stuutz/JAMF-Scripts/blob/master/Adobe_Uninstall_Policy_Script/Files/Adobe_Uninstall_Policy_Script_demo.mp4">Click Here</a> (video is sped up)
 
 <h3>Step (1) - CREATE A SMART GROUP</h3>
 <img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Adobe_Uninstall_Policy_Script/Files/smartgroup2.png">
