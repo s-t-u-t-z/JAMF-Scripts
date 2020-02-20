@@ -7,14 +7,14 @@ The purpose of this script was to create a way to notify the user that they have
 
 <br><b>Step (1) - CREATE A SMART GROUP</b><br>
 This smart group will report on the app and verion #
+<img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Adobe_App_Uninstall_Script/workflow.png">
 
 <br><b>Step (2) - UPLOAD SCRIPT</b><br>
-This smart group will report on the app and verion #
+Upload the JAMF_Message_PID_Kill_ADOBE_Uninstall.sh script to JAMF Pro
 
 
 <br><b>Step (3) - CREATE JAMF POLICIES</b><br>
 <img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Adobe_App_Uninstall_Script/workflow.png">
-There are two policies that need created for each app.
 
 
 <br>(Policy 1) - User Notify Policy (script)
