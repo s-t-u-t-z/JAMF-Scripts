@@ -1,6 +1,6 @@
 <h1>Adobe - Install Updates</h1>
 
-<video src="https://github.com/stuutz/JAMF-Scripts/blob/master/Adobe_Install_Updates/Adobe_App_Uninstall_Script_demo.mp4" width="320" height="200" controls preload></video>
+<video src="https://github.com/stuutz/JAMF-Scripts/blob/master/Adobe_App_Uninstall_Script/Adobe_App_Uninstall_Script_demo.mp4" width="320" height="200" controls preload></video>
 
 
 
