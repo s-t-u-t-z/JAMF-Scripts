@@ -1,6 +1,10 @@
 <h1>Adobe Uninstall Policy Script</h1>
 
-The purpose of this script was to create a script that notifies the user that they have outdated apps installed and gives them the option to Uninstall (or cancel).  This script specificially was used for Adobe Illustrator because the app name never changes (Adobe Illustrator.app) regardless of which version you are using.  So its makes it a little difficult to restrict a specific version without impacting all versions of the app.  Thus making a restriction policy difficult.  Regardless in my case I wanted to delete all the old apps because they are showing up with vulnerabilities.So this is a round about way to create a restriction policy.<br>
+The purpose of this script was to create a way to notify the user that they have outdated apps installed and give them the option to Uninstall (or cancel).  This script specificially was used for Adobe Illustrator because the app name never changes (Adobe Illustrator.app) regardless of which version you are using.  So its makes it a little difficult to restrict a specific version without impacting all versions of the app.  Thus making a restriction policy a bit more challenging.  Regardless in my case I wanted to delete all the old apps because they are showing up as having vulnerabilities.  So this is a round about way to restrict an app using JAMF policies.
+
+Let's breakdown this workflow:
+
+If a computer has the app installed it will be in the smart group.  The smart group will be scoped to the script policy.  The Uninstall policy will be scoped to "All Computers".  The script policy will run on all machines in the smart group.  The script will do a second check to ensure the app is installed.  If not it will exit.
 
 
 
