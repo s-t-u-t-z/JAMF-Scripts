@@ -6,7 +6,7 @@ The purpose of this script was to create a way to notify the user that they have
 <a href ="https://github.com/stuutz/JAMF-Scripts/blob/master/Adobe_App_Uninstall_Script/Adobe_App_Uninstall_Script_demo.mp4">Click Here</a>
 
 <h3>Step (1) - CREATE A SMART GROUP</h3>
-<img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Adobe_App_Uninstall_Script/smartgroup.png">
+<img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Adobe_App_Uninstall_Script/smartgroup2.png">
 
 <h3>Step (2) - UPLOAD SCRIPT</h3>
 Upload the <i>JAMF_Message_PID_Kill_ADOBE_Uninstall.sh</i> script to JAMF Pro
@@ -17,14 +17,14 @@ Upload the <i>JAMF_Message_PID_Kill_ADOBE_Uninstall.sh</i> script to JAMF Pro
 Trigger: Check-in<br>
 Frequency: Ongoing<br></b>
 <i>Add only the script from step 2.  Fill in each section (EXCEPT for description).  The Policy ID refers to the uninstall package policy (explained below).  To find the ID of a policy, click the policy link in JAMF Pro, look at the browser URL bar and find the "id=#".  The number is what you need.  Set the script priority to "Before".</i>
-<img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Adobe_App_Uninstall_Script/policy_script_info.png">
+<img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Adobe_App_Uninstall_Script/policy_script_info1.png">
 
 <br>(Policy 2) - App Removal Policy (uninstall package)<br>
 <b>Scope: All Computers<br>
 Trigger: None<br>
 Frequency: None<br></b>
 <i>Upload the uninstall package to JAMF Pro (not supplied).  Add the package to the policy.</i>
-<img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Adobe_App_Uninstall_Script/uninstallerpackage.png">
+<img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Adobe_App_Uninstall_Script/uninstallerpackage1.png">
 
 When completed it should look like this:<br>
-<img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Adobe_App_Uninstall_Script/workflow2.png">
+<img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Adobe_App_Uninstall_Script/workflow3.png">
