@@ -10,7 +10,7 @@ This smart group will report on the app and verion #
 <img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Adobe_App_Uninstall_Script/smartgroup.png">
 
 <br><b><h3>Step (2) - UPLOAD SCRIPT</h3></b><br>
-Upload the JAMF_Message_PID_Kill_ADOBE_Uninstall.sh script to JAMF Pro
+Upload the <u>JAMF_Message_PID_Kill_ADOBE_Uninstall.sh</u> script to JAMF Pro
 
 
 <br><b><h3>Step (3) - CREATE JAMF POLICIES</h3></b><br>
