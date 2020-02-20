@@ -23,7 +23,7 @@ Trigger: Check-in<br>
 Frequency: Ongoing<br></b>
 <img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Adobe_App_Uninstall_Script/policy_script_info.png">
 
-<br>(Policy 2) - App Removal Policy (uninstall package)
+<br>(Policy 2) - App Removal Policy (uninstall package)<br>
 <b>Scope: All Computers<br>
 Trigger: None<br>
 Frequency: None<br></b>
