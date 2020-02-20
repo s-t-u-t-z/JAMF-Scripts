@@ -21,7 +21,7 @@ Upload the <i>JAMF_Message_PID_Kill_ADOBE_Uninstall.sh</i> script to JAMF Pro
 <b>Scope: Smart Group (from step 1)<br>
 Trigger: Check-in<br>
 Frequency: Ongoing<br></b>
-<i>Add only the script from step 2.  Fill in each section (EXCEPT for description).  The Policy ID refers to the uninstall package policy (explained below).  To find the ID of a policy, click the link in JAMF Pro for the uninstall policy and in the URL bar it will show "ID=#".  The number is what you need.  Set the script priority to "Before".</i>
+<i>Add only the script from step 2.  Fill in each section (EXCEPT for description).  The Policy ID refers to the uninstall package policy (explained below).  To find the ID of a policy, click the policy link in JAMF Pro, look at the browser URL bar and find the "id=#".  The number is what you need.  Set the script priority to "Before".</i>
 <img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Adobe_App_Uninstall_Script/policy_script_info.png">
 
 <br>(Policy 2) - App Removal Policy (uninstall package)<br>
