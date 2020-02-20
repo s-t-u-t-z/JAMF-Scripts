@@ -1,8 +1,8 @@
 <h1>Adobe Uninstall Policy Script</h1>
 
-<a href ="test.html">test</a>
+<b>(SCRIPT DEMO</b><br>
+<a href ="https://github.com/stuutz/JAMF-Scripts/blob/master/Adobe_App_Uninstall_Script/Adobe_App_Uninstall_Script_demo.mp4">Click Here</a>
 
-<video src="https://github.com/stuutz/JAMF-Scripts/blob/master/Adobe_App_Uninstall_Script/Adobe_App_Uninstall_Script_demo.mp4" width="320" height="200" controls preload></video>
 
 Adobe Uninstall Policy Script
 
