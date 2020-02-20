@@ -4,7 +4,7 @@ The purpose of this script was to create a way to notify the user that they have
 
 Script Highlights:
 - If the app process is currently running it will inform the user with a jamfHelper window.  The user will be given the option to uninstall or cancel<br>
-- Gives the user the ability to save their work before the app quits<br>
+- After clicking the "Uninstall" button it will give the user the ability to save their work before the app quits<br>
 - If the application is not active it will silently uninstall the app<br>
 
 <h3>SCRIPT DEMO VIDEO</h3>
