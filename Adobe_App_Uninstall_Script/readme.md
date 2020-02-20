@@ -5,7 +5,7 @@ The purpose of this script was to create a way to notify the user that they have
 <b><h3>SCRIPT DEMO VIDEO</h3></b><br>
 <a href ="https://github.com/stuutz/JAMF-Scripts/blob/master/Adobe_App_Uninstall_Script/Adobe_App_Uninstall_Script_demo.mp4">Click Here</a>
 
-<br><b><h3>Step (1) - CREATE A SMART GROUP</h3></b><br>
+<br><b><h3>Step (1) - CREATE A SMART GROUP</h3></b>
 <img src="https://github.com/stuutz/JAMF-Scripts/blob/master/Adobe_App_Uninstall_Script/smartgroup.png">
 
 <br><b><h3>Step (2) - UPLOAD SCRIPT</h3></b><br>
