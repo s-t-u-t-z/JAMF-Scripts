@@ -5,8 +5,8 @@ The purpose of this script was to create a way to notify the user that they have
 <b>SCRIPT DEMO VIDEO</b><br>
 <a href ="https://github.com/stuutz/JAMF-Scripts/blob/master/Adobe_App_Uninstall_Script/Adobe_App_Uninstall_Script_demo.mp4">Click Here</a>
 
-<b>SMART GROUP</b><br>
-Create a smart group to report on the computers that have the app version installed
+<br><b>(1) CREATE A SMART GROUP</b><br>
+This smart group will report on the app and verion #
 
 
 <b>JAMF POLICIES</b><br>
